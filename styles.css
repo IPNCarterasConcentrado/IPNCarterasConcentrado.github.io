@@ -1,0 +1,230 @@
+body{
+    margin:0;
+    width:3500px;
+     font-family: sans-serif;
+     background-color:#222;
+}
+h2{
+    text-align: center;
+    margin-top: 10px;
+    margin:0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight:
+}
+form{
+    background-color:transparent;
+    padding: 15px 0;
+    max-width: 10000px;
+    margin:10px;
+    box-shadow: 0px 0px 55px #5a1236;
+    margin-top: 50px;
+    text-shadow: 0 0 0  #5a1236;
+    border-radius: 8px;
+}
+.form_input{
+    max-width: 10000px;
+    margin:0;
+}
+
+input,textarea{
+    height:30px;
+    box-sizing:border-box;
+    padding:6px 12px;
+    margin:0;
+    border:none;
+    border-left: 2px solid #5a1236;
+    box-shadow:2px 3px 5px #5a1236;
+    background-color: transparent;
+    text-shadow: #eee;
+    color:#eee;
+    resize:none
+}
+.Datos{
+      background-color: #fff;
+      color:#5a1236
+}
+.Numero{
+    width:80px;
+}
+.ClavedeCartera{
+    width:146px;
+}
+.Folio{
+    width:140px;
+}
+.Nombre{
+    width:360px;
+}
+.UnidadAcademica{
+    width:180px;
+}
+.Nivel{
+    width:70px
+}
+.MPpUA{
+    height: 50px;
+    width:180px;
+}
+.MontoTotal{
+    height: 30px;
+    width:140px;
+}
+.MontoTotalIndexado{
+    height: 30px;
+    width:180px;
+}
+.AreaRequirente{
+    height: 30px;
+    width:140px;
+}
+.SuficienciaPresupuestal{
+    height: 30px;
+    width:205px;
+}
+.OficiodeLiberacion{ 
+    height:30px;
+    width:180px;
+}
+.TipoBienes{ 
+    height:30px;
+    width:130px;
+}
+.DictamenDigital{ 
+    height:60px;
+    width:130px;
+}
+.DictamenDigital{ 
+    height:60px;
+    width:130px;
+}
+.Datos{
+    background-color: #fff;
+    color:#5a1236
+}
+.r1{
+    height:60px
+}
+.r2{
+    height:75px
+}
+.r3{
+    height:179px
+}
+.r4{
+    height:200px
+}
+.r5{
+    height:105px
+}
+.r6{
+    height:100px
+}
+.r7{
+    height:60px
+}
+.r8{
+    height:100px
+}
+.r9{
+    height:100px
+}
+.r10{
+    height:60px
+}
+.r11{
+    height:60px
+}
+.r12{
+    height:60px
+}
+.r13{
+    height:100px
+}
+.r14{
+    height:100px
+}
+.r15{
+    height:60px
+}
+.r16{
+    height:100px
+}
+.r17{
+    height:60px
+}
+.r18{
+    height:60px
+}
+.r19{
+    height:110px
+}
+.r20{
+    height:100px
+}
+.r21{
+    height:80px
+}
+.r22{
+    height:60px
+}
+.r23{
+    height:100px
+}
+.r24{
+    height:100px
+}
+.r25{
+    height:110px
+}
+.r26{
+    height:110px
+}
+.r27{
+    height:72px
+}
+.r28{
+    height:60px
+}
+.r29{
+    height:105px
+}
+.r30{
+    height:60px
+}
+.r31{
+    height:100px
+}
+.r32{
+    height:90px
+}
+.r33{
+    height:80px
+}
+.r34{
+    height:90px
+}
+.r35{
+    height:75px
+}
+.r36{
+    height:110px
+}
+.r37{
+    height:90px
+}
+.r38{
+    height:90px
+}
+.r39{
+    height:60px
+}
+.r40{
+    height:110px
+}
+
+
+
+
+
+
