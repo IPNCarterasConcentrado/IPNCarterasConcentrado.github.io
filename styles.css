@@ -222,7 +222,9 @@ input,textarea{
 .r40{
     height:110px
 }
-
+.r8,.r9,.r10,.r11,.r12,.r16,.r17,.r31,.r39{
+    background-color: #bdfe;    
+}
 
 
 
