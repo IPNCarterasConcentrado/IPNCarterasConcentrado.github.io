@@ -173,20 +173,23 @@
 <script>
 document.getElementById("miFormulario").addEventListener("submit", function(e) {
   e.preventDefault();
-  const form = this;
+  
+  const data = Object.fromEntries(new FormData(this));
+  
 
-  google.script.run
-    .withFailureHandler(err => {
-      alert("Error: " + err.message);
-    })
-    .withSuccessHandler(function() {
-      alert("Datos guardados correctamente");
-      form.reset();
-      google.script.host.close(); // <- Cierra el sidebar
-    })
-    .guardarDatos(Object.fromEntries(new FormData(form)));
+  fetch("https://script.google.com/macros/s/AKfycbzfceQCa5hBRdegXokObtpSy_iu0XkKUyfJHCQjZP9PfVW_nHCZuWiQfuzbUWTtAXPqFw/exec", {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(() => {
+    alert("Datos enviados correctamente");
+    this.reset();
+  })
+  .catch(() => alert("Error al enviar"));
 });
 </script>
+
 
 
 
