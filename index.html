@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextArea</title>
+    <!-- <style>
+            <?!= include("styles"); ?> 
+    </style>
+    -->
+
+      <link rel="stylesheet" href="styles.css"> 
+
+</head>
+<body>
+    
+  <form id="miFormulario">
+              <h2>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026)</h2>
+
+              <fieldset> 
+                <legend>Información Básica</legend>
+                 
+                 <div class="form_input">
+                  <label>Área académica (Nivel) o Administrativa</label>
+                  <input name="area" placeholder="central">
+                </div>
+                
+                <div class="form_input">
+                  <label>Dirección</label>
+                  <input name="direccion" placeholder="direccion">
+                </div>
+
+
+
+                <div class="form_input">
+                <label>Área académica (Nivel) o Administrativa</label>
+                <select name="nivel" id="nivel">
+                  <option value="Nivel Medio Superior">Nivel Medio Superior</option>
+                  <option value="Nivel Superior">Nivel Superior</option>
+                  <option value="administrativos">Administrativos</option>
+                  <option value="otros">Otros</option>
+                </select>
+              </div>
+                 
+                
+            
+                <div class="form_input">
+                  <label>E-mail</label>
+                  <input name="email" placeholder="Lugia_Djokovic@hotmail.com">
+                </div>
+            
+                <div class="form_input">
+                  <label>Asunto</label>
+                  <input name="asunto" placeholder="El asunto de tu mensaje">
+                </div>
+              </fieldset>
+
+              <div class="form_input">
+                <label>Nombre a usar</label>
+                <select name="usuario">
+                  <option value="Ixcoatl">Ixcoatl</option>
+                  <option value="Elizabeth">Elizabeth</option>
+                </select>
+              </div>
+            
+              <div class="form_input">
+                <label>Tipo de usuario</label>
+                <input list="referente" name="tipoUsuario">
+                <datalist id="referente">
+                  <option value="Ixcoatl">
+                  <option value="Elizabeth">
+                  <option value="Luis">
+                  <option value="Valeria">
+                </datalist>
+              </div>
+            
+              
+            
+              <div class="form_input">
+              
+                <table>
+                        <thead>
+                               <tr>
+                                    <th>
+                                         Nivel  
+                                    </th>
+                
+                                    <th>
+                                         Dependencia
+                                    </th>   
+
+                                    <th>
+                                         Nombre del Equipo
+                                    </th>
+                                    <th>
+                                        Cantidad
+                                    </th>
+                                    <th>
+                                        Marca/Modelo
+                                    </th>
+
+                                    <th>
+                                        Clave CUCOP
+                                    </th>
+
+                                    <th>
+                                        Justificación (Equipo no Existente, Sustitución o Complemento)
+                                    </th>
+
+                                    <th>
+                                         Precio de referencia
+                                    </th>
+                     
+                                    <th>
+                                        Prioridad (Baja, Media, Alta, Urgente)
+                                    </th>
+
+                               </tr>
+                        </thead>
+
+                        <tbody>
+                                  <tr>
+                                        <td >
+                                                 Novak Djocovic 
+                                        </td>
+                                  
+                                        <td>
+                                                 38
+                                        </td>   
+                  
+                                        <td>
+                                                 Serbio
+                                        </td>
+                                        <td>
+                                                 Activo
+                                        </td>
+                                        <td>
+                                                 100
+                                        </td>
+                  
+                                        <td>
+                                              24
+                                       </td>
+                  
+                                       <td>
+                                              40
+                                       </td>
+                  
+                                       <td>
+                                              7
+                                       </td>
+                                       
+                                       <td>
+                                              Oro y Bronce
+                                       </td>
+                                  </tr>
+                        </tbody>
+         
+                </table>  
+                
+                
+                <label>
+                  <input type="checkbox" name="terminos" value="Aceptado">
+                  Acepto los términos y condiciones
+                </label>
+              </div>
+            
+              <button type="submit">Enviar</button>
+</form>     
+</body>
+
+
+<script>
+document.getElementById("miFormulario").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const form = this;
+
+  google.script.run
+    .withFailureHandler(err => {
+      alert("Error: " + err.message);
+    })
+    .withSuccessHandler(function() {
+      alert("Datos guardados correctamente");
+      form.reset();
+      google.script.host.close(); // <- Cierra el sidebar
+    })
+    .guardarDatos(Object.fromEntries(new FormData(form)));
+});
+</script>
+
+
+
+</html>
