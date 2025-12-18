@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextArea</title>
+    <!-- <style>
+            <?!= include("styles"); ?> 
+    </style>
+    -->
+
+      <link rel="stylesheet" href="styles.css"> 
+
+</head>
+<body>
+    
 <form id="miFormulario">
 
   <fieldset>
@@ -46,6 +62,71 @@
   <button type="submit">Enviar</button>
 </form>
 
+</body>
+
+
+<script>
+document.getElementById("miFormulario").addEventListener("submit", function(e) {
+  e.preventDefault();
+  
+  const data = Object.fromEntries(new FormData(this));
+  
+
+  fetch("https://script.google.com/macros/s/AKfycbzfceQCa5hBRdegXokObtpSy_iu0XkKUyfJHCQjZP9PfVW_nHCZuWiQfuzbUWTtAXPqFw/exec", {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(() => {
+    alert("Datos enviados correctamente");
+    this.reset();
+  })
+  .catch(() => alert("Error al enviar"));
+});
+
+const nivelInput = document.getElementById("nivel");
+const dependenciaInput = document.getElementById("dependencia");
+const nivelRInput = document.getElementById("nivelR");
+const dependenciaRInput = document.getElementById("dependenciaR");
+const nivelR2Input = document.getElementById("nivelR2");
+const dependenciaR2Input = document.getElementById("dependenciaR2");
+
+
+// Escuchamos cambios en nombre o apellido
+nivelInput.addEventListener("input", generarNivelR);
+dependenciaInput.addEventListener("input", generarDependenciaR);
+
+function generarNivelR() {
+  const nivel = nivelInput.value.trim();
+  if (nivel) {
+    // Genera el usuario como: primera letra del nombre + apellido, todo en minúsculas
+    nivelRInput.value = (nivel);
+    nivelR2Input.value = (nivel);
+  } else {
+    nivelRInput.value = ""; // Limpia si falta algún dato
+    nivelR2Input.value = "";
+}
+}
+function generarDependenciaR() {
+  const dependencia = dependenciaInput.value.trim();
+
+  if (dependencia) {
+    // Genera el usuario como: primera letra del nombre + apellido, todo en minúsculas
+    dependenciaRInput.value = (dependencia);
+    dependenciaR2Input.value = (dependencia);
+  } else {
+    dependenciaRInput.value = ""; // Limpia si falta algún dato
+  }
+}
+
+
+
+</script>
+
+
+
+
+</html>
 
 
 
