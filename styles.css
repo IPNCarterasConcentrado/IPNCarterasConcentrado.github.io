@@ -16,16 +16,24 @@ h2{
 form{
     background-color:transparent;
     padding: 20px 0;
-    max-width: 800px;
+    max-width: 1200px;
     margin:auto;
     box-shadow: 0px 0px 55px #f04d69;
     margin-top: 50px;
     text-shadow: 0 0 0  #fff;
     border-radius: 8px;
 }
+
+/*padding:6px 20px;*/
+
 .form_input{
-    padding:6px 20px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
 }
+
 
 input,textarea, select{
 
@@ -56,7 +64,7 @@ option{
 fieldset{
     border-radius: 5px;
     border:1px solid #f04d69;
-    padding:0 20px 20px 20px;
+    padding:10px 10px 20px 20px;
     margin:20px;
 }
 legend{
@@ -66,3 +74,9 @@ a{
     color:#69f;
     text-decoration: none;
 }
+.input_tabla{
+     width:114.28px;
+}/*
+td{
+    width:120px;
+}*/
