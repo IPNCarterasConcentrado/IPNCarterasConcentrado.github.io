@@ -1,99 +1,55 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TextArea</title>
-    <!-- <style>
-            <?!= include("styles"); ?> 
-    </style>
-    -->
+<form id="miFormulario">
 
-      <link rel="stylesheet" href="styles.css"> 
-
-</head>
-<body>
+  <fieldset>
+    <legend>Información Básica 3</legend>
     
-  <form id="miFormulario">
-              <h2>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026)</h2>
+    <div class="form_input">
+      <label for="area">Área académica (Nivel) o Administrativa</label>
+      <input id="area" name="area" placeholder="central ( Ejemplo )">
+    </div>
 
-              <fieldset> 
-                <legend>Información Básica 3</legend>
-                 
-                 <div class="form_input">
-                  <label for="area">Área académica (Nivel) o Administrativa</label>
-                  <input  name="area" placeholder="central ( Ejemplo )">
-                </div>
-                
-                <div class="form_input">
-                  <label for="direccion">Dirección</label>
-                  <input id="direccion" name="direccion" placeholder="direccion">
-                </div>
+    <div class="form_input">
+      <label for="direccion">Dirección</label>
+      <input id="direccion" name="direccion" placeholder="direccion">
+    </div>
 
+    <div class="form_input">
+      <label for="nivel">Área académica (Nivel) o Administrativa</label>
+      <select name="nivel" id="nivel">
+        <option value="Nivel Medio Superior">Nivel Medio Superior</option>
+        <option value="Nivel Superior">Nivel Superior</option>
+        <option value="administrativos">Administrativos</option>
+        <option value="otros">Otros</option>
+      </select>
+    </div>
 
+    <div class="form_input">
+      <label for="email">E-mail</label>
+      <input id="email" name="email" placeholder="Lugia_Djokovic@hotmail.com">
+    </div>
 
-                <div class="form_input">
-                <label for="nivel">Área académica (Nivel) o Administrativa</label>
-                <select   name="nivel" id="nivel">
-                  <option value="Nivel Medio Superior">Nivel Medio Superior</option>
-                  <option value="Nivel Superior">Nivel Superior</option>
-                  <option value="administrativos">Administrativos</option>
-                  <option value="otros">Otros</option>
-                </select>
-              </div>
-                 
-                
-            
-                <div class="form_input">
-                  <label>E-mail</label>
-                  <input name="email" placeholder="Lugia_Djokovic@hotmail.com">
-                </div>
-            
-                <div class="form_input">
-                  <label>Asunto</label>
-                  <input name="asunto" placeholder="El asunto de tu mensaje">
-                </div>
-              </fieldset>
+    <div class="form_input">
+      <label for="asunto">Asunto</label>
+      <input id="asunto" name="asunto" placeholder="El asunto de tu mensaje">
+    </div>
 
-              
-              
-            
-                
-                
-                <label>
-                  <input type="checkbox" name="terminos" value="Aceptado">
-                  Acepto los términos y condiciones
-                </label>
-            
-              <button type="submit">Enviar</button>
-</form>     
-</body>
+    <div class="form_input">
+      <label for="dependencia">Dependencia</label>
+      <input id="dependencia" name="dependencia" placeholder="CECyT 10">
+    </div>
 
+  </fieldset>
 
-<script>
-document.getElementById("miFormulario").addEventListener("submit", function(e) {
-  e.preventDefault();
-  
-  const data = Object.fromEntries(new FormData(this));
-  
+  <div class="form_input">
+    <label>
+      <input type="checkbox" name="terminos" value="Aceptado">
+      Acepto los términos y condiciones
+    </label>
+  </div>
 
-  fetch("https://script.google.com/macros/s/AKfycbzfceQCa5hBRdegXokObtpSy_iu0XkKUyfJHCQjZP9PfVW_nHCZuWiQfuzbUWTtAXPqFw/exec", {
-    method: "POST",
-    body: JSON.stringify(data)
-  })
-  .then(res => res.json())
-  .then(() => {
-    alert("Datos enviados correctamente");
-    this.reset();
-  })
-  .catch(() => alert("Error al enviar"));
-});
-</script>
+  <button type="submit">Enviar</button>
+</form>
 
-
-
-
-</html>
 
 
 
