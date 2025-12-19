@@ -72,7 +72,7 @@
  const aviso = document.getElementById("aviso");   
     document.getElementById("miFormulario").addEventListener("submit", function(e){
                 e.preventDefault();
-                aviso.textContent = "";
+                aviso.textContent = " ";
                 const data = Object.fromEntries(new FormData(this));
                 fetch("https://script.google.com/macros/s/AKfycby8OoUpDSwzRuswKwjmZqHu_jKLp7Yq82vqn79Mp_S0kVDM-p5NaHPZdV7r9nijI66SWw/exec", {
                   method: "POST",
@@ -137,4 +137,5 @@ function generarDependenciaR() {
 
 
 </html>
+
 
