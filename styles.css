@@ -2,7 +2,7 @@ body{
     margin:0;
      font-family: sans-serif;
      background-color:#222;
-     color:#fff;
+     color:#000;
      background:linear-gradient(to bottom,#98989A,#fff);
 }
 h2{
@@ -90,6 +90,7 @@ label{
    /* white-space: nowrap;*/
     border-left: 2px solid #f00;
     box-shadow:2px 3px 15px #fff;
+    color:#fff;
     
 }
 
@@ -109,4 +110,5 @@ label{
 td{
     width:120px;
 }*/
+
 
