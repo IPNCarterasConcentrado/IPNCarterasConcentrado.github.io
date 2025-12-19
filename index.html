@@ -88,6 +88,139 @@
 
   <button type="submit">Enviar</button>
    <p id="aviso"></p>
+<table border="1" width="100%">
+  <thead>
+                               <tr>
+                                    <th>
+                                         Nivel  
+                                    </th>
+                
+                                    <th>
+                                         Dependencia
+                                    </th>   
+
+                                    <th>
+                                         Nombre del Equipo
+                                    </th>
+                                    <th>
+                                        Cantidad
+                                    </th>
+                                    <th>
+                                        Marca/Modelo
+                                    </th>
+
+                                    <th>
+                                        Clave CUCOP
+                                    </th>
+
+                                    <th>
+                                        Justificación (Equipo no Existente, Sustitución o Complemento)
+                                    </th>
+
+                                    <th>
+                                         Precio de referencia
+                                    </th>
+                     
+                                    <th>
+                                        Prioridad (Baja, Media, Alta, Urgente)
+                                    </th>
+
+                               </tr>
+                        </thead>
+
+                        <tbody>
+                                <tr>
+                                                      
+                                                                      <td id ="nivelR" name="nivelR" class="input_tabla"> 
+                                                             </td>
+                                                                      
+                                                              
+                                                                 <td id="dependenciaR" name="dependenciaR" class="input_tabla">      
+                                                                 
+                                                             </td>   
+                                       
+                                                              
+                                                                 <td name="nombredelEquipoR1" class="input_tabla">
+                                                             </td>
+                                                              
+                                                                          <td name="cantidadR1" class="input_tabla">
+                                                             </td>
+                                                              
+                                                                    <td name="marcaR1" class="input_tabla">   
+                                                             </td>
+                                       
+                                                              
+                                                                  <td name="claveCUCOPR1" class="input_tabla"> 
+                                                            </td>
+                                       
+                                                             
+                                                                 <td
+                                                                          name="justificacionR1" 
+                                                                          class="auto-expand input_tabla"
+                                                                          rows="1"
+                                                                          style="width: 100%; resize:none;"
+                                                                         > Justificacion</textarea>
+                                                           </td>
+                                       
+                                                             
+                                                                   <td name="precioR1" class="input_tabla">                                       </td>
+                                                            
+                                                             
+                                                                   <td name="prioridadR1" class="input_tabla">
+                                                            </td>
+                                                       </tr>
+                     
+                                                       <tr>
+                                                             <td >
+                                                                      <td id ="nivelR2" name="nivelR2" class="input_tabla"> 
+                                                             </td>
+                                                                      
+                                                              
+                                                                 <td id="dependenciaR2" name="dependenciaR2" class="input_tabla">      
+                                                                 
+                                                             </td>   
+                                       
+                                                              
+                                                                 <td name="nombredelEquipoR2" class="input_tabla">
+                                                             </td>
+                     
+                                                              
+                                                                          <td name="cantidadR2" class="input_tabla">
+                                                             </td>
+                                                              
+                                                                    <td name="marcaR2" class="input_tabla">   
+                                                             </td>
+                                       
+                                                              
+                                                                  <td name="claveCUCOPR2" class="input_tabla"> 
+                                                            </td>
+                                       
+                                                             
+                                                                   <td
+                                                                          name="justificacionR2" 
+                                                                          class="auto-expand input_tabla"
+                                                                          rows="1"
+                                                                          style="resize:none;"
+                                                                         > Justificacion</textarea>
+                                                           </td>
+                                       
+                                                             
+                                                                   <td name="precioR2" class="input_tabla">                                       </td>
+                                                            
+                                                             
+                                                                   <td name="prioridadR2" class="input_tabla">
+                                                            </td>
+                                                       </tr>
+
+
+
+                              
+                        </tbody>     
+</table>
+
+
+
+    
 </form>
 
 </body>
@@ -101,7 +234,7 @@
                 e.preventDefault();
                 aviso.textContent = " ";
                 const data = Object.fromEntries(new FormData(this));
-                fetch("https://script.google.com/macros/s/AKfycbwoBu2lXVlgocbmgXBRz-oEUFzKnRTrZv96XuWdSQc_PsJ_RQv0AGmlG_sGCONaNe916Q/exec", {
+                fetch("https://script.google.com/macros/s/AKfycbyi-I4hRBCeC2IU0ZZjQ9_9icECjUclFrTKJiZ4iLGtEr5hAL90bIglTxhQwTf-ZWJIhA/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -163,6 +296,7 @@ function generarDependenciaR() {
 
 
 </html>
+
 
 
 
