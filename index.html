@@ -17,7 +17,7 @@
 <form id="miFormulario">
 
   <fieldset>
-    <legend>Información Básica Test 4.5</legend>
+    <legend>Información Básica Test 4.6</legend>
     
     <div class="form_input">
       <label for="area">Área académica (Nivel) o Administrativa</label>
@@ -74,7 +74,7 @@
                 e.preventDefault();
                 aviso.textContent = " ";
                 const data = Object.fromEntries(new FormData(this));
-                fetch("https://script.google.com/macros/s/AKfycby8OoUpDSwzRuswKwjmZqHu_jKLp7Yq82vqn79Mp_S0kVDM-p5NaHPZdV7r9nijI66SWw/exec", {
+                fetch("https://script.google.com/macros/s/AKfycbzJLuXu2BDON83SbtlEZuwiey18NSegWowVz-2KKuAgALDU9cca17vgDR67ArhhL18UKA/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -137,6 +137,7 @@ function generarDependenciaR() {
 
 
 </html>
+
 
 
 
