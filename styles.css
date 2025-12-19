@@ -3,7 +3,7 @@ body{
      font-family: sans-serif;
      background-color:#222;
      color:#fff;
-     background:linear-gradient(to bottom,#f55,#500)
+     background:linear-gradient(to bottom,#98989A,#fff);
 }
 h2{
     text-align: center;
@@ -11,20 +11,21 @@ h2{
     margin:0;
     margin-bottom: 10px;
     text-transform: uppercase;
-    font-weight:
 }
 form{
     background-color:transparent;
     padding: 20px 0;
     max-width: 1200px;
     margin:auto;
-    box-shadow: 0px 0px 55px #f04d69;
+    box-shadow: 0px 0px 55px #9d2449;
     margin-top: 50px;
     text-shadow: 0 0 0  #fff;
     border-radius: 8px;
 }
 
 /*padding:6px 20px;*/
+
+
 
 .form_input{
     display: grid;
@@ -33,18 +34,20 @@ form{
     margin-bottom: 3px;
     gap: 10px;
 }
-
-
+/*width: 100%;
+  box-sizing: border-box;
+  padding: 6px 12px;
+*/
 input,textarea, select{
 
-    width:400px;
+    width:100%;
     box-sizing:border-box;
     padding:6px 12px;
-    margin-bottom: 10px;
+   /* margin-bottom: 10px;*/
     border:none;
     border-left: 2px solid #f00;
-    box-shadow:2px 3px 15px #00f;
-    background-color: transparent;
+    box-shadow:2px 3px 15px #9d2449;
+    background-color: #fff;
     text-shadow: #eee;
     color:#eee
 }
@@ -69,6 +72,7 @@ fieldset{
 }
 legend{
     padding: 0 6px;
+    background-color: #611232;
 }
 a{
     color:#69f;
@@ -78,10 +82,30 @@ a{
      width:114.28px;
 }
 
+label{
+    width:100%;
+    background-color: #611232;
+    padding: 6px 2px;
+/*    text-align: right;      /* 👈 alineación */
+   /* white-space: nowrap;*/
+    border-left: 2px solid #f00;
+    box-shadow:2px 3px 15px #fff;
+    
+}
+
+
+/*.form_input{
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+*/
+
+
+
 /*
 td{
     width:120px;
 }*/
-
-
-
