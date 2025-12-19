@@ -17,7 +17,7 @@
 <form id="miFormulario">
    <h2>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026)</h2>
   <fieldset>
-    <legend>Información Básica Test 4.9</legend>
+    <legend>Información Básica Test 5.0</legend>
     
     <div class="form_input">
       <label for="secretaria">Secretaría</label>
@@ -101,7 +101,7 @@
                 e.preventDefault();
                 aviso.textContent = " ";
                 const data = Object.fromEntries(new FormData(this));
-                fetch("https://script.google.com/macros/s/AKfycbxm7YfdIUjOREjrYDsmaRJJxWpWbeqIQs4Tj-7mERZAWEzt-rZJPazyDQN74vj0Z0vtUw/exec", {
+                fetch("https://script.google.com/macros/s/AKfycbwoBu2lXVlgocbmgXBRz-oEUFzKnRTrZv96XuWdSQc_PsJ_RQv0AGmlG_sGCONaNe916Q/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -163,6 +163,7 @@ function generarDependenciaR() {
 
 
 </html>
+
 
 
 
