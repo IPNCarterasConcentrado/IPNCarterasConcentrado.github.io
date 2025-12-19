@@ -17,7 +17,7 @@
 <form id="miFormulario">
 
   <fieldset>
-    <legend>Información Básica Test 4.7</legend>
+    <legend>Información Básica Test 4.8</legend>
     
     <div class="form_input">
       <label for="secretaria">Secretaría</label>
@@ -101,7 +101,7 @@
                 e.preventDefault();
                 aviso.textContent = " ";
                 const data = Object.fromEntries(new FormData(this));
-                fetch("https://script.google.com/macros/s/AKfycbyfFHXZBBI78zqnegJBnvFaRl5kwrQ63nGEsXsgaz-QUYPDvc3ybCdaWh6I_z8jpdBERw/exec", {
+                fetch("https://script.google.com/macros/s/AKfycbxm7YfdIUjOREjrYDsmaRJJxWpWbeqIQs4Tj-7mERZAWEzt-rZJPazyDQN74vj0Z0vtUw/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -163,5 +163,6 @@ function generarDependenciaR() {
 
 
 </html>
+
 
 
