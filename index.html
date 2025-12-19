@@ -20,8 +20,8 @@
     <legend>Información Básica Test 4.6</legend>
     
     <div class="form_input">
-      <label for="area">Área académica (Nivel) o Administrativa</label>
-      <input id="area" name="area" placeholder="central ( Ejemplo )">
+      <label for="secretaria">Secretaría</label>
+      <input id="secretaria" name="secretaria" placeholder="   ">
     </div>
 
     <div class="form_input">
@@ -30,7 +30,7 @@
     </div>
 
     <div class="form_input">
-      <label for="nivel">Área académica (Nivel) o Administrativa</label>
+      <label for="nivel">Nivel/Area/otro</label>
       <select name="nivel" id="nivel">
         <option value="Nivel Medio Superior">Nivel Medio Superior</option>
         <option value="Nivel Superior">Nivel Superior</option>
@@ -44,16 +44,43 @@
     </div>
     
     <div class="form_input">
-      <label for="email">E-mail</label>
-      <input id="email" name="email" placeholder="Lugia_Djokovic@hotmail.com">
+      <label for="ubicacion">Ubicación(Domicilio)</label>
+      <input id="ubicacion" name="ubicacion" placeholder="Lugia_Djokovic@hotmail.com">
     </div>
 
     <div class="form_input">
-      <label for="asunto">Asunto</label>
-      <input id="asunto" name="asunto" placeholder="El asunto de tu mensaje">
+      <label for="titular">Titular</label>
+      <input id="titular" name="titular" placeholder="Titular ">
     </div>
 
+    <div class="form_input">
+      <label for="telefonoTitular">Teléfono Titular</label>
+      <input id="telefonoTitular" name="telefonoTitular" placeholder="telefono del Titular ">
+    </div>
+
+    <div class="form_input">
+      <label for="correoTitular">Correo Titular</label>
+      <input id="correoTitular" name="correoTitular" placeholder="correo del Titular ">
+    </div>
     
+    <div class="form_input">
+      <label for="responsable">Responsable de llenado(Capítulo 5000)</label>
+      <input id="responsable" name="responsable" placeholder="responsable ">
+    </div>
+
+
+    <div class="form_input">
+      <label for="telefonoResponsable">Teléfono Responsable</label>
+      <input id="telefonoResponsable" name="telefonoResponsable" placeholder="telefono del Responsable ">
+    </div>
+
+    <div class="form_input">
+      <label for="correoResponsable">Correo Responsable</label>
+      <input id="correoResponsable" name="correoResponsable" placeholder="correo del Responsable ">
+    </div>
+
+
+
 
   </fieldset>
 
@@ -94,7 +121,7 @@
   .catch(() => alert("Error al enviar"));
 });
 
-/*const nivelInput = document.getElementById("nivel");
+const nivelInput = document.getElementById("nivel");
 const dependenciaInput = document.getElementById("dependencia");
 const nivelRInput = document.getElementById("nivelR");
 const dependenciaRInput = document.getElementById("dependenciaR");
@@ -128,7 +155,6 @@ function generarDependenciaR() {
     dependenciaRInput.value = ""; // Limpia si falta algún dato
   }
 }
-*/
 
 
 </script>
@@ -137,8 +163,3 @@ function generarDependenciaR() {
 
 
 </html>
-
-
-
-
-
