@@ -17,9 +17,12 @@ form{
     padding: 20px 0;
     max-width: 1200px;
     margin:auto;
+   /*
     box-shadow: 0px 0px 55px #9d2449;
+    */
     margin-top: 50px;
-    text-shadow: 0 0 0  #fff;
+   /* text-shadow: 0 0 0  #fff;
+    */
     border-radius: 8px;
 }
 
@@ -46,9 +49,11 @@ input,textarea, select{
    /* margin-bottom: 10px;*/
     border:none;
     border-left: 2px solid #f00;
-    box-shadow:2px 3px 15px #9d2449;
+/*    box-shadow:2px 3px 15px #9d2449;
+    */
     background-color: #fff;
-    text-shadow: #eee;
+/*    text-shadow: #eee;
+    */
     color:#000;
 }
 textarea{
@@ -73,6 +78,7 @@ fieldset{
 legend{
     padding: 0 6px;
     background-color: #611232;
+    color:#fff;
 }
 a{
     color:#69f;
@@ -89,7 +95,8 @@ label{
 /*    text-align: right;      /* 👈 alineación */
    /* white-space: nowrap;*/
     border-left: 2px solid #f00;
-    box-shadow:2px 3px 15px #fff;
+  /*  box-shadow:2px 3px 15px #fff;
+    */
     color:#fff;
     
 }
@@ -110,5 +117,6 @@ label{
 td{
     width:120px;
 }*/
+
 
 
