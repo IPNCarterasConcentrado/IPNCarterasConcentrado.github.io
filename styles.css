@@ -49,7 +49,7 @@ input,textarea, select{
     box-shadow:2px 3px 15px #9d2449;
     background-color: #fff;
     text-shadow: #eee;
-    color:#eee
+    color:#000;
 }
 textarea{
     min-width: 100%;   
@@ -109,3 +109,4 @@ label{
 td{
     width:120px;
 }*/
+
