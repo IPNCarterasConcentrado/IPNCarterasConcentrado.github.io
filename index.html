@@ -17,7 +17,7 @@
 <form id="miFormulario">
    <h2>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026)</h2>
   <fieldset>
-    <legend>Información Básica Test 5.08</legend>
+    <legend>Información Básica Test 5.09</legend>
     
     <div class="form_input">
       <label for="secretaria">Secretaría</label>
@@ -293,7 +293,19 @@ function generarDependenciaR() {
     dependenciaRInput.value = ""; // Limpia si falta algún dato
   }
 }
+const textareas = document.querySelectorAll(".auto-expand");
 
+function autoResize(textarea) {
+  textarea.style.height = "auto";
+  textarea.style.height = textarea.scrollHeight + "px";
+}
+
+textareas.forEach(textarea => {
+  textarea.addEventListener("input", () => autoResize(textarea));
+
+  // Ajusta la altura inicial si ya tiene texto
+  autoResize(textarea);
+});
 
 </script>
 
@@ -301,6 +313,7 @@ function generarDependenciaR() {
 
 
 </html>
+
 
 
 
