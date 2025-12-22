@@ -17,7 +17,7 @@
 <form id="miFormulario">
    <h2>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026)</h2>
   <fieldset>
-    <legend>Información Básica Test 5.12</legend>
+    <legend>Información Básica Test 5.14</legend>
     
     <div class="form_input">
       <label for="secretaria">Secretaría</label>
@@ -271,7 +271,7 @@ function generarNivelR() {
   const nivel = nivelInput.value.trim();
   if (nivel) {
     // Genera el usuario como: primera letra del nombre + apellido, todo en minúsculas
-    nivelRInput.textContent = ""; = (nivel);
+    nivelRInput.textContent = (nivel);
     nivelR2Input.textContent = (nivel);
   } else {
     nivelRInput.textContent = ""; // Limpia si falta algún dato
@@ -311,6 +311,7 @@ textareas.forEach(textarea => {
 
 
 </html>
+
 
 
 
