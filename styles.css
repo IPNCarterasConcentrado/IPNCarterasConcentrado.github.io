@@ -99,7 +99,13 @@ label{
     color:#fff;
     
 }
-
+.auto-expand {
+  width: 100%;
+  min-height: 40px;
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
 
 /*.form_input{
     display: grid;
@@ -116,6 +122,7 @@ label{
 td{
     width:120px;
 }*/
+
 
 
 
