@@ -17,7 +17,7 @@
 <form id="miFormulario">
    <h2>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026)</h2>
   <fieldset>
-    <legend>Información Básica Test 5.15</legend>
+    <legend>Información Básica Test 5.16</legend>
     
     <div class="form_input">
       <label for="secretaria">Secretaría</label>
@@ -236,12 +236,12 @@ textareas.forEach(textarea => {
                 e.preventDefault();
                 aviso.textContent = " ";
                 const data = Object.fromEntries(new FormData(this));
-                /*fetch("https://script.google.com/macros/s/AKfycbyi-I4hRBCeC2IU0ZZjQ9_9icECjUclFrTKJiZ4iLGtEr5hAL90bIglTxhQwTf-ZWJIhA/exec", {
+                /*fetch("https://script.google.com/macros/s/AKfycbylJPoK0gXZxnMQzAWlCLGbwMvi7OsMV-rKF3eEpNDSkpbzZ8R6kzFAadKFIonA97Of-Q/exec", {
                                  method: "POST",
                                  body: new FormData(this)
                 })*/
                 
-                 fetch("https://script.google.com/macros/s/AKfycbyP_1fulj16Pdz8x3WAMO3Y_9EgLkHuMlqz_-wfRtdAju6g7sy4-1CnDb9-sUAoMg5aWw/exec", {
+                 fetch("https://script.google.com/macros/s/AKfycbylJPoK0gXZxnMQzAWlCLGbwMvi7OsMV-rKF3eEpNDSkpbzZ8R6kzFAadKFIonA97Of-Q/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -268,6 +268,7 @@ textareas.forEach(textarea => {
 
 
 </html>
+
 
 
 
