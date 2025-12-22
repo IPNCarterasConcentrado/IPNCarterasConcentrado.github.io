@@ -59,7 +59,6 @@ input,textarea, select{
 textarea{
     min-width: 100%;   
     resize:none;
-    min-height: 102px;
     font-family: sans-serif;
 }
 .checkbox{
@@ -117,6 +116,7 @@ label{
 td{
     width:120px;
 }*/
+
 
 
 
