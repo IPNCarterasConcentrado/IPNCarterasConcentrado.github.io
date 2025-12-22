@@ -17,7 +17,7 @@
 <form id="miFormulario">
    <h2>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026)</h2>
   <fieldset>
-    <legend>Información Básica Test 5.14</legend>
+    <legend>Información Básica Test 5.15</legend>
     
     <div class="form_input">
       <label for="secretaria">Secretaría</label>
@@ -128,86 +128,8 @@
                                </tr>
                         </thead>
 
-                        <tbody>
-                                <tr>
-                                                     <td  id ="nivelR" name="nivelR" class="input_tabla"> 
-                                                             </td>
-                                                                      
-                                                             <td id="dependenciaR" name="dependenciaR" class="input_tabla">      
-                                                                 
-                                                             </td>   
-                                       
-                                                             <td>
-                                                                 <input name="nombredelEquipoR1" class="input_tabla">
-                                                             </td>
-                                                             <td>
-                                                                          <input name="cantidadR1" class="input_tabla">
-                                                             </td>
-                                                             <td>
-                                                                    <input name="marcaR1" class="input_tabla">   
-                                                             </td>
-                                       
-                                                             <td>
-                                                                  <input name="claveCUCOPR1" class="input_tabla"> 
-                                                            </td>
-                                       
-                                                            <td>
-                                                                 <textarea
-                                                                          name="justificacionR1" 
-                                                                          class="auto-expand input_tabla"
-                                                                          rows="1"
-                                                                          style="width: 100%; resize:none;"
-                                                                         > Justificacion</textarea>
-                                                           </td>
-                                       
-                                                            <td>
-                                                                   <input name="precioR1" class="input_tabla">                                       </td>
-                                                            
-                                                            <td>
-                                                                   <input name="prioridadR1" class="input_tabla">
-                                                            </td>
-                                                       </tr>
-                     
-                                                       <tr>
-                                                             <td  id ="nivelR2" name="nivelR2" class="input_tabla"> 
-                                                             </td>
-                                                                      
-                                                             <td id="dependenciaR2" name="dependenciaR2" class="input_tabla">      
-                                                                 
-                                                             </td>   
-                                       
-                                                             <td>
-                                                                 <input name="nombredelEquipoR2" class="input_tabla">
-                                                             </td>
-                     
-                                                             <td>
-                                                                          <input name="cantidadR2" class="input_tabla">
-                                                             </td>
-                                                             <td>
-                                                                    <input name="marcaR2" class="input_tabla">   
-                                                             </td>
-                                       
-                                                             <td>
-                                                                  <input name="claveCUCOPR2" class="input_tabla"> 
-                                                            </td>
-                                       
-                                                            <td>
-                                                                   <textarea
-                                                                          name="justificacionR2" 
-                                                                          class="auto-expand input_tabla"
-                                                                          rows="1"
-                                                                          style="resize:none;"
-                                                                         > Justificacion</textarea>
-                                                           </td>
-                                       
-                                                            <td>
-                                                                   <input name="precioR2" class="input_tabla">                                       </td>
-                                                            
-                                                            <td>
-                                                                   <input name="prioridadR2" class="input_tabla">
-                                                            </td>
-                                                       </tr>
-
+                        <tbody id="tablaBody">
+                                
 
 
                               
@@ -223,7 +145,91 @@
 
 
 <script>
+ const tbody = document.getElementById("tablaBody");
 
+for (let i = 1; i <= 15; i++) {
+  const tr = document.createElement("tr");
+
+  tr.innerHTML = `
+    <td id="nivelR${i}" name="nivelR${i}" class="input_tabla"></td>
+
+    <td id="dependenciaR${i}" name="dependenciaR${i}" class="input_tabla"></td>
+
+    <td>
+      <input name="nombredelEquipoR${i}" class="input_tabla">
+    </td>
+
+    <td>
+      <input name="cantidadR${i}" class="input_tabla">
+    </td>
+
+    <td>
+      <input name="marcaR${i}" class="input_tabla">
+    </td>
+
+    <td>
+      <input name="claveCUCOPR${i}" class="input_tabla">
+    </td>
+
+    <td>
+      <textarea
+        name="justificacionR${i}"
+        class="auto-expand input_tabla"
+        rows="1"
+        style="resize:none;"
+      >Justificacion</textarea>
+    </td>
+
+    <td>
+      <input name="precioR${i}" class="input_tabla">
+    </td>
+
+    <td>
+      <input name="prioridadR${i}" class="input_tabla">
+    </td>
+  `;
+
+  tbody.appendChild(tr);
+}
+
+const nivelInput = document.getElementById("nivel");
+const dependenciaInput = document.getElementById("dependencia");
+// Escuchamos cambios en nombre o apellido
+nivelInput.addEventListener("input", generarNivel);
+dependenciaInput.addEventListener("input", generarDependencia);
+
+
+function generarNivel() {
+  const valor = nivelInput.value.trim();
+  // Selecciona todas las celdas cuyo id empieza con 'nivelR'
+  const celdasNivel = document.querySelectorAll("[id^='nivelR']");
+  celdasNivel.forEach(celda => celda.textContent = valor);
+}
+
+function generarDependencia() {
+  const valor = dependenciaInput.value.trim();
+  const celdasDep = document.querySelectorAll("[id^='dependenciaR']");
+  celdasDep.forEach(celda => celda.textContent = valor);
+}
+
+const textareas = document.querySelectorAll(".auto-expand");
+
+function autoResize(textarea) {
+  textarea.style.height = "auto";
+  textarea.style.height = textarea.scrollHeight + "px";
+}
+
+textareas.forEach(textarea => {
+  textarea.addEventListener("input", () => autoResize(textarea));
+
+  // Ajusta la altura inicial si ya tiene texto
+  autoResize(textarea);
+});
+
+    
+
+    
+    
  const form = document.getElementById("miFormulario");
  const aviso = document.getElementById("aviso");   
     document.getElementById("miFormulario").addEventListener("submit", function(e){
@@ -255,55 +261,6 @@
   .catch(() => alert("Error al enviar"));
 });
 
-const nivelInput = document.getElementById("nivel");
-const dependenciaInput = document.getElementById("dependencia");
-const nivelRInput = document.getElementById("nivelR");
-const dependenciaRInput = document.getElementById("dependenciaR");
-const nivelR2Input = document.getElementById("nivelR2");
-const dependenciaR2Input = document.getElementById("dependenciaR2");
-
-
-// Escuchamos cambios en nombre o apellido
-nivelInput.addEventListener("input", generarNivelR);
-dependenciaInput.addEventListener("input", generarDependenciaR);
-
-function generarNivelR() {
-  const nivel = nivelInput.value.trim();
-  if (nivel) {
-    // Genera el usuario como: primera letra del nombre + apellido, todo en minúsculas
-    nivelRInput.textContent = (nivel);
-    nivelR2Input.textContent = (nivel);
-  } else {
-    nivelRInput.textContent = ""; // Limpia si falta algún dato
-    nivelR2Input.textContent = "";
-}
-}
-function generarDependenciaR() {
-  const dependencia = dependenciaInput.value.trim();
-
-  if (dependencia) {
-    // Genera el usuario como: primera letra del nombre + apellido, todo en minúsculas
-    dependenciaRInput.textContent = (dependencia);
-    dependenciaR2Input.textContent = (dependencia);
-  } else {
-    dependenciaRInput.textContent = "";
-    dependenciaR2Input.textContent = "";
-      // Limpia si falta algún dato
-  }
-}
-const textareas = document.querySelectorAll(".auto-expand");
-
-function autoResize(textarea) {
-  textarea.style.height = "auto";
-  textarea.style.height = textarea.scrollHeight + "px";
-}
-
-textareas.forEach(textarea => {
-  textarea.addEventListener("input", () => autoResize(textarea));
-
-  // Ajusta la altura inicial si ya tiene texto
-  autoResize(textarea);
-});
 
 </script>
 
@@ -311,6 +268,7 @@ textareas.forEach(textarea => {
 
 
 </html>
+
 
 
 
