@@ -17,7 +17,7 @@
 <form id="miFormulario">
    <h2>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026)</h2>
   <fieldset>
-    <legend>Información Básica Test 5.09</legend>
+    <legend>Información Básica Test 5.10</legend>
     
     <div class="form_input">
       <label for="secretaria">Secretaría</label>
@@ -130,12 +130,10 @@
 
                         <tbody>
                                 <tr>
-                                                     <td >
-                                                                      <input id ="nivelR" name="nivelR" class="input_tabla"> 
+                                                     <td  id ="nivelR" name="nivelR" class="input_tabla"> 
                                                              </td>
                                                                       
-                                                             <td>
-                                                                 <input id="dependenciaR" name="dependenciaR" class="input_tabla">      
+                                                             <td id="dependenciaR" name="dependenciaR" class="input_tabla">      
                                                                  
                                                              </td>   
                                        
@@ -171,12 +169,10 @@
                                                        </tr>
                      
                                                        <tr>
-                                                             <td >
-                                                                      <input id ="nivelR2" name="nivelR2" class="input_tabla"> 
+                                                             <td  id ="nivelR2" name="nivelR2" class="input_tabla"> 
                                                              </td>
                                                                       
-                                                             <td>
-                                                                 <input id="dependenciaR2" name="dependenciaR2" class="input_tabla">      
+                                                             <td id="dependenciaR2" name="dependenciaR2" class="input_tabla">      
                                                                  
                                                              </td>   
                                        
@@ -275,11 +271,11 @@ function generarNivelR() {
   const nivel = nivelInput.value.trim();
   if (nivel) {
     // Genera el usuario como: primera letra del nombre + apellido, todo en minúsculas
-    nivelRInput.value = (nivel);
-    nivelR2Input.value = (nivel);
+    nivelRInput.textContent = ""; = (nivel);
+    nivelR2Input.textContent = (nivel);
   } else {
-    nivelRInput.value = ""; // Limpia si falta algún dato
-    nivelR2Input.value = "";
+    nivelRInput.textContent = ""; // Limpia si falta algún dato
+    nivelR2Input.textContent = "";
 }
 }
 function generarDependenciaR() {
@@ -287,10 +283,12 @@ function generarDependenciaR() {
 
   if (dependencia) {
     // Genera el usuario como: primera letra del nombre + apellido, todo en minúsculas
-    dependenciaRInput.value = (dependencia);
-    dependenciaR2Input.value = (dependencia);
+    dependenciaRInput.textContent = (dependencia);
+    dependenciaR2Input.textContent = (dependencia);
   } else {
-    dependenciaRInput.value = ""; // Limpia si falta algún dato
+    dependenciaRInput.textContent = "";
+    dependenciaR2Input.textContent = "";
+      // Limpia si falta algún dato
   }
 }
 const textareas = document.querySelectorAll(".auto-expand");
@@ -313,6 +311,7 @@ textareas.forEach(textarea => {
 
 
 </html>
+
 
 
 
