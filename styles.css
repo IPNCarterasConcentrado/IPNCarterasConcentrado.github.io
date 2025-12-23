@@ -4,8 +4,8 @@ ody{
      background-color:#222;
      color:#000;
 
-     /*background:linear-gradient(to bottom,#611232,#fff);*/
-     background-color: #eee;
+     background:linear-gradient(to bottom,#611232,#fff);
+     //background-color: #eee;
 }
 h2{
     text-align: center;
@@ -121,3 +121,4 @@ label{
 td{
     width:120px;
 }*/
+
