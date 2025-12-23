@@ -48,7 +48,7 @@ for (let i = 1; i <= 15; i++) {
 }
 
 // escritura automatica de celdas repetidas
-
+const secretariaInput = document.getElementById("secretaria");
 const nivelInput = document.getElementById("nivel");
 const dependenciaInput = document.getElementById("dependencia");
 // Escuchamos cambios en nombre o apellido
@@ -84,6 +84,35 @@ textareas.forEach(textarea => {
 });
 
 //Listas desplegables que dependen de otros valores
+const secretarias={
+    SSE:[{text:"Nivel Medio Superior", value:"NMS"} ,{text:"Nivel Superior",value:"NS"}],
+    SG:[{text:"Administracion",value:"ADMIN"}],
+    OTROS:[{text:"Otros",value:"Otros"}]
+}
+
+
+
+
+
+secretariaInput.addEventListener("change", () => {
+  const valor = secretariaInput.value;
+
+  // Limpiar subcategoría
+  nivelInput.innerHTML = '<option value="">-- Selecciona Nivel--</option>';
+  nivelInput.disabled = !valor;
+
+  if (!valor || !secretarias[valor]) return;
+
+  secretarias[valor].forEach(op => {
+    const option = document.createElement("option");
+    option.value = op.value;
+    option.textContent = op.text;
+    nivelInput.appendChild(option);
+  });
+});
+
+
+
 
 const opciones = {
   NMS: ['CET 1 "WALTER CROSS BUCHANAN"',
