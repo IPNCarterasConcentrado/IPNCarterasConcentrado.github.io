@@ -17,7 +17,7 @@
 <form id="miFormulario">
    <h2>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026)</h2>
   <fieldset>
-    <legend>Información Básica Test 5.16</legend>
+    <legend>Información Básica Test 5.17</legend>
     
     <div class="form_input">
       <label for="secretaria">Secretaría</label>
@@ -30,17 +30,20 @@
     </div>
 
     <div class="form_input">
-      <label for="nivel">Nivel/Area/otro</label>
-      <select name="nivel" id="nivel">
-        <option value="Nivel Medio Superior">Nivel Medio Superior</option>
-        <option value="Nivel Superior">Nivel Superior</option>
-        <option value="administrativos">Administrativos</option>
-        <option value="otros">Otros</option>
-      </select>
-    </div>
-    <div class="form_input">
-      <label for="dependencia">Dependencia</label>
-      <input id="dependencia" name="dependencia" placeholder="CECyT 10">
+          <label for="nivel">Nivel/Area/otro</label>   
+             <select id="nivel">
+                   <option value="">-- Selecciona un nivel--</option>
+                   <option value="NMS">Nivel Medio Superior</option>
+                   <option value="NS">Nivel Superior</option>
+                   <option value="ADMIN">Administracion</option>
+                   <option value="Otros">Otros</option>
+             </select>
+            </div>
+    <div class="form_input">    
+             <label for="dependencia">Dependencia</label>
+             <select name="dependencia" id="dependencia" disabled>
+               <option value="">-- Selecciona primero una categoría --</option>
+             </select>
     </div>
     
     <div class="form_input">
@@ -195,8 +198,8 @@ for (let i = 1; i <= 15; i++) {
 const nivelInput = document.getElementById("nivel");
 const dependenciaInput = document.getElementById("dependencia");
 // Escuchamos cambios en nombre o apellido
-nivelInput.addEventListener("input", generarNivel);
-dependenciaInput.addEventListener("input", generarDependencia);
+nivelInput.addEventListener("change", generarNivel);
+dependenciaInput.addEventListener("change", generarDependencia);
 
 
 function generarNivel() {
@@ -226,6 +229,51 @@ textareas.forEach(textarea => {
   autoResize(textarea);
 });
 
+
+const opciones = {
+  NMS: ['CET 1 "WALTER CROSS BUCHANAN"',
+'CECYT 1 "GONZALO VÁZQUEZ VELA"',
+'CECYT 2 "MIGUEL BERNARD"','CENTRO DE ESTUDIOS CIENTÍFICOS Y TECNOLÓGICOS (CECYT 3) “ESTANISLAO RAMÍREZ RUIZ”',
+'CECYT 4 “LÁZARO CÁRDENAS”',
+'CECYT 5 “BENITO JUÁREZ”',
+'CECYT 6 “MIGUEL OTHÓN DE MENDIZÁBAL”',
+'CECYT 7 “CUAUHTÉMOC”',
+'CECYT 8 “NARCISO BASSOLS”',
+'CECYT 9 “JUAN DE DIOS BÁTIZ”',
+'CECYT 10 “CARLOS VALLEJO MÁRQUEZ”',
+'CECYT 11 “WILFRIDO MASSIEU”',
+'CECYT 12 “JOSÉ MARÍA MORELOS”',
+'CECYT 13 “RICARDO FLORES MAGÓN”',
+'CECYT 14 “LUIS ENRIQUE ERRO”',
+'CECYT 15 “DIÓDORO ANTÚNEZ ECHEGARAY”',
+'CECYT 16 “HIDALGO”',
+'CECYT 17 “LEÓN, GUANAJUATO”',
+'CECYT 18 “ZACATECAS”',
+'CECYT 19 "LEONA VICARIO"',
+'CECYT 20 "NATALIA SERDÁN ALATRISTE"' ],
+  NS: ["ESIME", "ESIQUIE", "ESIA","ESIT","ESE","EFM","ENMH","ENEO"],
+  ADMIN:["DPO","CGPII","SIIP","SIIS","CENAC"],
+  Otros: ["Microscopio", "Reactivos", "Centrífuga"]
+};
+
+nivelInput.addEventListener("change", () => {
+  const valor = nivelInput.value;
+
+  // Limpiar subcategoría
+  dependenciaInput.innerHTML = '<option value="">-- Selecciona --</option>';
+  dependenciaInput.disabled = !valor;
+
+  if (!valor || !opciones[valor]) return;
+
+  opciones[valor].forEach(texto => {
+    const option = document.createElement("option");
+    option.value = texto;
+    option.textContent = texto;
+    dependenciaInput.appendChild(option);
+  });
+});
+
+    
     
 
     
@@ -268,6 +316,7 @@ textareas.forEach(textarea => {
 
 
 </html>
+
 
 
 
