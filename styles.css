@@ -4,8 +4,8 @@ body{
      background-color:#222;
      color:#000;
 
-     background:linear-gradient(to bottom,#611232,#fff);
-     //background-color: #eee;
+     background:linear-gradient(to bottom,#fff,#9d2449);
+      //background-color: #eee;
 }
 h2{
     text-align: center;
@@ -83,7 +83,8 @@ a{
     text-decoration: none;
 }
 .input_tabla{
-     width:114.28px;
+    width:100%; 
+    /*width:114.28px;*/
 }
 
 label{
@@ -114,10 +115,21 @@ label{
     margin-bottom: 10px;
 }
 */
-
-
-
-/*
+.cantidadCol{
+    width:10px;
+}
+.fijasCol{
+    width:60px;
+}
+img{
+    height:100px;
+    width:100%;
+}
+.imagenes{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0px;
+}/*
 td{
     width:120px;
 }*/
