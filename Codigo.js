@@ -1,4 +1,10 @@
 
+/*Cosas que faltan 
+-Agregar tamaño correcto a columnas 
+-Crear el otro diseño con miras a agregar filas extras o cantidad de filas 
+
+*/
+
 //Creacion de renglones de tablas 
 const tbody = document.getElementById("tablaBody");
 
@@ -6,15 +12,15 @@ for (let i = 1; i <= 15; i++) {
   const tr = document.createElement("tr");
 
   tr.innerHTML = `
-    <td id="nivelR${i}" name="nivelR${i}" class="input_tabla"></td>
+    <td id="nivelR${i}" name="nivelR${i}" class="input_tabla fijasCol"></td>
 
-    <td id="dependenciaR${i}" name="dependenciaR${i}" class="input_tabla"></td>
+    <td id="dependenciaR${i}" name="dependenciaR${i}" class="input_tabla fijasCol"></td>
 
     <td>
       <input name="nombredelEquipoR${i}" class="input_tabla">
     </td>
 
-    <td>
+    <td class="cantidadCol">
       <input name="cantidadR${i}" class="input_tabla">
     </td>
 
@@ -25,6 +31,16 @@ for (let i = 1; i <= 15; i++) {
     <td>
       <input name="claveCUCOPR${i}" class="input_tabla">
     </td>
+    
+    <td>
+      <textarea
+        name="especificacionesR${i}"
+        class="auto-expand input_tabla"
+        rows="1"
+        style="resize:none;"
+      > </textarea>
+    </td>
+
 
     <td>
       <textarea
@@ -47,6 +63,7 @@ for (let i = 1; i <= 15; i++) {
   tbody.appendChild(tr);
 }
 
+
 // escritura automatica de celdas repetidas
 const secretariaInput = document.getElementById("secretaria");
 const nivelInput = document.getElementById("nivel");
@@ -68,6 +85,8 @@ function generarDependencia() {
   const celdasDep = document.querySelectorAll("[id^='dependenciaR']");
   celdasDep.forEach(celda => celda.textContent = valor);
 }
+
+// Ajuste automatico de celdas con mucho texto
 
 const textareas = document.querySelectorAll(".auto-expand");
 
@@ -110,8 +129,6 @@ secretariaInput.addEventListener("change", () => {
     nivelInput.appendChild(option);
   });
 });
-
-
 
 
 const opciones = {
