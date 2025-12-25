@@ -166,15 +166,24 @@ td{
     gap: 5px;
 }*/
 
-.datos{
+/*.datos{
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
+}*/
+.datos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
-/*
+
 @media (min-width: 900px){
   .datos{
     grid-template-columns: 1fr 1fr;
   }
 }
-*/
+
+fieldset{
+    width: 100%;
+    margin: 0;
+}
