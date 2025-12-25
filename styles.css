@@ -22,7 +22,7 @@ h2{
 form{
     background-color:transparent;
     padding: 20px 0;
-    max-width: 1200px;
+    width: 100%;
     margin:auto;
 /*    box-shadow: 0px 0px 55px #9d2449;
 */
@@ -51,8 +51,8 @@ input,textarea, select{
 
     width:100%;
     box-sizing:border-box;
-    padding:6px 12px;
-   /* margin-bottom: 10px;*/
+    padding:6px 6px;
+    margin-bottom: 10px;*/
     border:none;
    /* border-left: 2px solid #f00;*/
     box-shadow:2px 3px 15px #9d2449;
@@ -164,17 +164,17 @@ td{
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 5px;
-}
-*/
+}*/
+
 .datos{
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
 }
-
+/*
 @media (min-width: 900px){
   .datos{
     grid-template-columns: 1fr 1fr;
   }
 }
-
+*/
