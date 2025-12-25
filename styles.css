@@ -70,6 +70,8 @@ option{
     background-color:#fff;
 }
 fieldset{
+    width: 100%;
+    box-sizing: border-box;
     border-radius: 5px;
    border:1px solid #f04d69;
     padding:10px 10px 20px 20px;
@@ -148,3 +150,4 @@ td{
     grid-template-columns: repeat(2, auto);
     gap: 5px;
 }
+
