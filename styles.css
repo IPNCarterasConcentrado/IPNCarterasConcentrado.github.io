@@ -4,8 +4,8 @@ body{
      background-color:#222;
      color:#000;
 
-     background:linear-gradient(to bottom,#fff,#9d2449);
-      //background-color: #eee;
+     /* background:linear-gradient(to bottom,#fff,#9d2449);*/
+     background-color: #98989A;
 }
 h2{
     text-align: center;
@@ -13,6 +13,7 @@ h2{
     margin:0;
     margin-bottom: 10px;
     text-transform: uppercase;
+    color:#9d2449;
 }
 form{
     background-color:transparent;
@@ -24,6 +25,7 @@ form{
     margin-top: 50px;
     text-shadow: 0 0 0  #fff;
     border-radius: 8px;
+    color:#fff;
 }
 
 /*padding:6px 20px;*/
@@ -72,6 +74,10 @@ fieldset{
    border:1px solid #f04d69;
     padding:10px 10px 20px 20px;
     margin:20px;
+    background-color: #eee;
+    color:#000;
+}
+
 }
 legend{
     padding: 0 6px;
@@ -129,9 +135,16 @@ img{
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 0px;
-}/*
+}
+th{
+    background-color:#9d2449;
+}
 td{
-    width:120px;
-}*/
-
-
+    background-color:#eee;
+    color:#000;
+}
+.datos{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 5px;
+}
