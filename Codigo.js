@@ -530,7 +530,7 @@ nivelInput.addEventListener("change", () => {
                                  body: new FormData(this)
                 })*/
                 
-                 fetch("https://script.google.com/macros/s/AKfycbylJPoK0gXZxnMQzAWlCLGbwMvi7OsMV-rKF3eEpNDSkpbzZ8R6kzFAadKFIonA97Of-Q/exec", {
+                 fetch("https://script.google.com/macros/s/AKfycbyi9jo-DPl2-rbtY2-hnf5Mb3OQID0kJJLjtDpJsvjHfxiUwaIP03kCfU8s9OCPr72DCA/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -549,3 +549,4 @@ nivelInput.addEventListener("change", () => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
