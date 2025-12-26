@@ -11,13 +11,13 @@ body{
      background-color: #DCDCDE;
 
 }
-h2{
+h1{
     text-align: center;
     margin-top: 10px;
     margin:0;
     margin-bottom: 10px;
     text-transform: uppercase;
-    color:#9d2449;
+    color:#000;
 }
 form{
     background-color:transparent;
