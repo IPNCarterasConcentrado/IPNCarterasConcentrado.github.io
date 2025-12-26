@@ -517,14 +517,25 @@ nivelInput.addEventListener("change", () => {
     
     
 
-//Guardado de Datos    
-    
- const form = document.getElementById("miFormulario");
+const form = document.getElementById("miFormulario");
  const aviso = document.getElementById("aviso");   
     document.getElementById("miFormulario").addEventListener("submit", function(e){
                 e.preventDefault();
+                const formData = new FormData(this);
+                const selectsTexto = [
+                      "secretaria",
+                      "direccion",
+                      "nivel",
+                      "dependencia"
+                ];
+                selectsTexto.forEach(id => {
+                        const select = document.getElementById(id);
+                        if (select && select.selectedIndex >= 0) {
+                        formData.set(id, select.options[select.selectedIndex].text);
+                        }
+                });
                 aviso.textContent = " ";
-                const data = Object.fromEntries(new FormData(this));
+                const data = Object.fromEntries(formData);
                 /*fetch("https://script.google.com/macros/s/AKfycbylJPoK0gXZxnMQzAWlCLGbwMvi7OsMV-rKF3eEpNDSkpbzZ8R6kzFAadKFIonA97Of-Q/exec", {
                                  method: "POST",
                                  body: new FormData(this)
@@ -549,4 +560,3 @@ nivelInput.addEventListener("change", () => {
   })
   .catch(() => alert("Error al enviar"));
 });
-
