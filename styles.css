@@ -195,3 +195,10 @@ fieldset{
     outline: none;
     border:none;
 }
+
+.tabla_style{
+     width: 95%;
+     margin: 20px auto; /* centra horizontalmente
+     border-collapse: collapse;    */
+
+}
