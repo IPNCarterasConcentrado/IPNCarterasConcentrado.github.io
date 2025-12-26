@@ -200,7 +200,7 @@ fieldset{
      width: 95%;
      margin: 20px auto; /* centra horizontalmente
      border-collapse: collapse;    */
-
+     margin-top: 60px;
 }
 button{
     width:800px;
@@ -211,4 +211,5 @@ p{
        margin: 0 25% ;
        color :#000;
 }
+
 
