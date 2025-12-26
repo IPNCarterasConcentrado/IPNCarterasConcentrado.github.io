@@ -202,3 +202,13 @@ fieldset{
      border-collapse: collapse;    */
 
 }
+button{
+    width:800px;
+    display: block;
+    margin: 20px auto;
+}
+p{
+       margin: 0 25% ;
+       color :#000;
+}
+
