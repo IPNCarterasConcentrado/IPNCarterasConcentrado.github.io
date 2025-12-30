@@ -541,7 +541,7 @@ const form = document.getElementById("miFormulario");
                                  body: new FormData(this)
                 })*/
                 
-                 fetch("https://script.google.com/macros/s/AKfycbyi9jo-DPl2-rbtY2-hnf5Mb3OQID0kJJLjtDpJsvjHfxiUwaIP03kCfU8s9OCPr72DCA/exec", {
+                 fetch("https://script.google.com/macros/s/AKfycbweIlGNMWF8ygoJLliL8jxzM0U-we7i64H1sDam6EdPDrXnRC9KxvbaJho079tawLcK3g/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -560,3 +560,4 @@ const form = document.getElementById("miFormulario");
   })
   .catch(() => alert("Error al enviar"));
 });
+
