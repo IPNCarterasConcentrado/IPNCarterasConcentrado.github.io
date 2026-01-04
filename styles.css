@@ -19,12 +19,14 @@ h1{
     text-transform: uppercase;
     color:#000;
 }
+
 h2,p,li{
     margin-top: 10px;
     margin:0;
     margin-bottom: 10px;
     color:#000;
 }
+
 form{
     background-color:transparent;
     padding: 20px 0;
@@ -41,13 +43,21 @@ form{
 /*padding:6px 20px;*/
 
 
-
+/*
 .form_input{
     display: grid;
     grid-template-columns: 220px 1fr;
     align-items: center;
     margin-bottom: 3px;
     gap: 10px;
+}
+*/
+.form_input{
+    display: grid;
+    grid-template-columns: minmax(140px, 35%) 1fr;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 3px;
 }
 /*width: 100%;
   box-sizing: border-box;
@@ -186,13 +196,18 @@ td{
 }*/
 .datos{
     display: grid;
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /*
+    grid-template-columns: 1fr;*/
     gap: 20px;
 }
 
 @media (min-width: 900px){
   .datos{
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+  grid-template-columns: repeat(2, auto);
+  /*  grid-template-columns: 1fr 1fr;*/
   }
 }
 
@@ -234,4 +249,3 @@ td .input_tabla{
     border: none;
     margin: 0;
 }
-
