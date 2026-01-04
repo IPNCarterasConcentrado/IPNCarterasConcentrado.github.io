@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 body{
     margin:0;
      font-family: sans-serif;
@@ -272,5 +275,18 @@ td .input_tabla{
     padding: 8px;
     border: none;
     margin: 0;
+}
+@media (max-width: 768px) {
+  p{
+    margin: 0 10px;
+  }
+
+  form{
+    padding: 10px;
+  }
+
+  fieldset{
+    width: 100%;
+  }
 }
 
