@@ -1,31 +1,30 @@
 
 const tbody = document.getElementById("tablaBody");
 
-for (let i = 1; i <= 4; i++) {
+for (let i = 1; i <= 10; i++) {
   const tr = document.createElement("tr");
 
   tr.innerHTML = `
-    <td id="nivelR${i}" name="nivelR${i}" class="input_tabla fijasCol"></td>
+    <td id="nivelR${i}" class="input_tabla fijasCol" aria-label="Nivel/Area/Otro"></td>
     
     
-
-
-    <td id="dependenciaR${i}" name="dependenciaR${i}" class="input_tabla fijasCol"></td>
-
+    <td id="dependenciaR${i}" class="input_tabla fijasCol" aria-label="Dependencia"></td>
+    
     <td>
       <textarea
         name="nombredelEquipoR${i}"
         class="auto-expand input_tabla obligatorio"
         rows="1"
         style="resize:none;"
-      > </textarea>
-       
-
+        aria-label="Nombre del Equipo"
+        > </textarea>
     </td>
+    
+    
 
-      <td class="cantidadCol">
+    <td class="cantidadCol">
 
-      <input type="number" class="input_tabla" name="cantidadR${i}"> </input>  
+      <input type="number" name="cantidadR${i}" class="input_tabla " aria-label="Cantidad"> </input>  
     
       </td>
 
@@ -35,53 +34,59 @@ for (let i = 1; i <= 4; i++) {
         class="auto-expand input_tabla"
         rows="1"
         style="resize:none;"
-      > </textarea>
+        aria-label="Marca"
+        > </textarea>
       </td>
 
     <td>
+      
+      <input type="number" name="claveCUCOPR${i}" class="input_tabla" aria-label="Clave CUCOP"> </input>
 
-    <input type="number" class="input_tabla" name="claveCUCOPR${i}"> </input>
+      </td>
 
 
-    </td>
-    
+
     <td>
       <textarea
         name="especificacionesR${i}"
         class="auto-expand input_tabla"
         rows="1"
         style="resize:none;"
-      > </textarea>
+        aria-label="Especificaciones"
+        > </textarea>
     </td>
 
-
     <td>
-      
-      <select id="justificacionR${i}" name="justificacionR${i}" class="tabla_select">
+      <select id="justificacionR${i}" name="justificacionR${i}" class="tabla_select" aria-label="Justificación">
                    <option value="">-- Selecciona una prioridad--</option>
                    <option value="Equipo no Existente">Equipo no Existente</option>
                    <option value="Sustitución">Sustitución</option>
                    <option value="Complemento">Complemento</option>
       </select>
-      </td>
+    </td>
 
-      <td>
-      
+    
+    
+     <td>
+
       <input type="text"
              name="precioR${i}"
              class="input_tabla precio"
-             inputmode="decimal"> </input>
-      </td>
+             inputmode="decimal" 
+             aria-label="Precio"> </input>
 
+      </td>
+    
     <td>
-      <select id="prioridadR${i}" name="prioridadR${i}" placeholder="   " class="tabla_select">
+      <select id="prioridadR${i}" name="prioridadR${i}" placeholder="   " class="tabla_select" aria-label="Prioridad">
                    <option value="">-- Selecciona una prioridad--</option>
                    <option value="Baja">Baja</option>
                    <option value="Media">Media</option>
                    <option value="Alta">Alta</option>
-                   <option value="Urgente">Urgente</option>
+                   <option value="Urgente">Urgente</option> 
       </select>
     </td>
+
   `;
 
   tbody.appendChild(tr);
@@ -574,10 +579,10 @@ function agregarFila(){
 
   const fila = document.createElement("tr");
   fila.innerHTML = `
-    <td id="nivelR${i}" class="input_tabla fijasCol"></td>
+    <td id="nivelR${i}" class="input_tabla fijasCol" aria-label="Nivel/Area/Otro"></td>
     
     
-    <td id="dependenciaR${i}" class="input_tabla fijasCol"></td>
+    <td id="dependenciaR${i}" class="input_tabla fijasCol" aria-label="Dependencia"></td>
     
     <td>
       <textarea
@@ -585,14 +590,15 @@ function agregarFila(){
         class="auto-expand input_tabla obligatorio"
         rows="1"
         style="resize:none;"
-      > </textarea>
+        aria-label="Nombre del Equipo"
+        > </textarea>
     </td>
     
     
 
     <td class="cantidadCol">
 
-      <input type="number" name="cantidadR${i}" class="input_tabla "> </input>  
+      <input type="number" name="cantidadR${i}" class="input_tabla " aria-label="Cantidad"> </input>  
     
       </td>
 
@@ -602,12 +608,13 @@ function agregarFila(){
         class="auto-expand input_tabla"
         rows="1"
         style="resize:none;"
-      > </textarea>
+        aria-label="Marca"
+        > </textarea>
       </td>
 
     <td>
       
-      <input type="number" name="claveCUCOPR${i}" class="input_tabla"> </input>
+      <input type="number" name="claveCUCOPR${i}" class="input_tabla" aria-label="Clave CUCOP"> </input>
 
       </td>
 
@@ -619,11 +626,12 @@ function agregarFila(){
         class="auto-expand input_tabla"
         rows="1"
         style="resize:none;"
-      > </textarea>
+        aria-label="Especificaciones"
+        > </textarea>
     </td>
 
     <td>
-      <select id="justificacionR${i}" name="justificacionR${i}" class="tabla_select">
+      <select id="justificacionR${i}" name="justificacionR${i}" class="tabla_select" aria-label="Justificación">
                    <option value="">-- Selecciona una prioridad--</option>
                    <option value="Equipo no Existente">Equipo no Existente</option>
                    <option value="Sustitución">Sustitución</option>
@@ -638,12 +646,13 @@ function agregarFila(){
       <input type="text"
              name="precioR${i}"
              class="input_tabla precio"
-             inputmode="decimal"> </input>
+             inputmode="decimal" 
+             aria-label="Precio"> </input>
 
       </td>
     
     <td>
-      <select id="prioridadR${i}" name="prioridadR${i}" placeholder="   " class="tabla_select">
+      <select id="prioridadR${i}" name="prioridadR${i}" placeholder="   " class="tabla_select" aria-label="Prioridad">
                    <option value="">-- Selecciona una prioridad--</option>
                    <option value="Baja">Baja</option>
                    <option value="Media">Media</option>
@@ -726,4 +735,5 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
