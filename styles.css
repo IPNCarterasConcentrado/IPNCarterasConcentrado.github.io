@@ -194,6 +194,26 @@ td{
     grid-template-columns: repeat(2, auto);
     gap: 10px;
 }*/
+
+.datos{
+    display: grid;
+    /*grid-template-columns: repeat(2, auto);*/
+    /*grid-template-columns: 1fr;*/
+    grid-template-columns: minmax(140px, 35%) 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 900px){
+  .datos{
+    display: grid;
+    grid-template-columns: minmax(140px, 35%) 1fr;
+    /*grid-template-columns: 1fr 1fr;*/
+  }
+}
+
+
+
+/*
 .datos{
     display: grid;
     display: grid;
@@ -210,6 +230,10 @@ td{
   /*  grid-template-columns: 1fr 1fr;*/
   }
 }
+*/
+
+
+
 
 fieldset{
     width: 100%;
@@ -249,3 +273,4 @@ td .input_tabla{
     border: none;
     margin: 0;
 }
+
