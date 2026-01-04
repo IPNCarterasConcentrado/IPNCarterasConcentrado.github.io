@@ -1,36 +1,48 @@
 
-/*Cosas que faltan 
--Agregar tamaño correcto a columnas 
--Crear el otro diseño con miras a agregar filas extras o cantidad de filas 
-
-*/
-
-
-//Creacion de renglones de tablas 
 const tbody = document.getElementById("tablaBody");
 
-for (let i = 1; i <= 15; i++) {
+for (let i = 1; i <= 4; i++) {
   const tr = document.createElement("tr");
 
   tr.innerHTML = `
     <td id="nivelR${i}" name="nivelR${i}" class="input_tabla fijasCol"></td>
+    
+    
+
 
     <td id="dependenciaR${i}" name="dependenciaR${i}" class="input_tabla fijasCol"></td>
 
     <td>
-      <input name="nombredelEquipoR${i}" class="input_tabla">
+      <textarea
+        name="nombredelEquipoR${i}"
+        class="auto-expand input_tabla obligatorio"
+        rows="1"
+        style="resize:none;"
+      > </textarea>
+       
+
     </td>
 
-    <td class="cantidadCol">
-      <input name="cantidadR${i}" class="input_tabla">
-    </td>
+      <td class="cantidadCol">
+
+      <input type="number" class="input_tabla" name="cantidadR${i}"> </input>  
+    
+      </td>
 
     <td>
-      <input name="marcaR${i}" class="input_tabla">
-    </td>
+      <textarea
+        name="marcaR${i}"
+        class="auto-expand input_tabla"
+        rows="1"
+        style="resize:none;"
+      > </textarea>
+      </td>
 
     <td>
-      <input name="claveCUCOPR${i}" class="input_tabla">
+
+    <input type="number" class="input_tabla" name="claveCUCOPR${i}"> </input>
+
+
     </td>
     
     <td>
@@ -44,20 +56,29 @@ for (let i = 1; i <= 15; i++) {
 
 
     <td>
-      <textarea
-        name="justificacionR${i}"
-        class="auto-expand input_tabla"
-        rows="1"
-        style="resize:none;"
-      >Justificacion</textarea>
-    </td>
+      
+      <select id="justificacionR${i}" name="justificacionR${i}" class="tabla_select">
+                   <option value="">-- Selecciona una prioridad--</option>
+                   <option value="Equipo no Existente">Equipo no Existente</option>
+                   <option value="Sustitución">Sustitución</option>
+                   <option value="Complemento">Complemento</option>
+      </select>
+      </td>
+
+      <td>
+      
+      <input type="number" name="precioR${i}" class="input_tabla"> </input>
+      
+      </td>
 
     <td>
-      <input name="precioR${i}" class="input_tabla">
-    </td>
-
-    <td>
-      <input name="prioridadR${i}" class="input_tabla">
+      <select id="prioridadR${i}" name="prioridadR${i}" placeholder="   " class="tabla_select">
+                   <option value="">-- Selecciona una prioridad--</option>
+                   <option value="Baja">Baja</option>
+                   <option value="Media">Media</option>
+                   <option value="Alta">Alta</option>
+                   <option value="Urgente">Urgente</option>
+      </select>
     </td>
   `;
 
@@ -70,6 +91,17 @@ const secretariaInput = document.getElementById("secretaria");
 const direccionInput = document.getElementById("direccion");
 const nivelInput = document.getElementById("nivel");
 const dependenciaInput = document.getElementById("dependencia");
+
+document.getElementById("tablaBody").addEventListener("change", e => {
+  if (!e.target.name?.startsWith("nombredelEquipoR")) return;
+
+  const filas = document.querySelectorAll("#tablaBody tr");
+  const ultimaFila = filas[filas.length - 1];
+
+  if (ultimaFila.contains(e.target)) {
+    agregarFila();
+  }
+});
 // Escuchamos cambios en nombre o apellido
 nivelInput.addEventListener("change", generarNivel);
 dependenciaInput.addEventListener("change", generarDependencia);
@@ -514,10 +546,139 @@ nivelInput.addEventListener("change", () => {
   });
 });
 
+const disparadores = document.querySelectorAll(".obligatorio");
+
+  disparadores.forEach(input => {
+    input.addEventListener("input", function () {
+      const fila = this.closest("tr");
+      const camposFila = fila.querySelectorAll("input, textarea, select");
+    //  const camposFila = fila.querySelectorAll("input");
+
+      const tieneValor = this.value.trim() !== "";
+
+      camposFila.forEach(campo => {
+        if (tieneValor) {
+          campo.setAttribute("required", "required");
+        } else {
+          campo.removeAttribute("required");
+        }
+      });
+    });
+  });
+
+function agregarFila(){
+  const tbody = document.getElementById("tablaBody");
+  const i = obtenerNumeroFila();
+
+  const fila = document.createElement("tr");
+  fila.innerHTML = `
+    <td id="nivelR${i}" class="input_tabla fijasCol"></td>
+    
+    
+    <td id="dependenciaR${i}" class="input_tabla fijasCol"></td>
+    
+    <td>
+      <textarea
+        name="nombredelEquipoR${i}"
+        class="auto-expand input_tabla obligatorio"
+        rows="1"
+        style="resize:none;"
+      > </textarea>
+    </td>
     
     
 
-const form = document.getElementById("miFormulario");
+    <td class="cantidadCol">
+
+      <input type="number" name="cantidadR${i}" class="input_tabla "> </input>  
+    
+      </td>
+
+    <td>
+      <textarea
+        name="marcaR${i}"
+        class="auto-expand input_tabla"
+        rows="1"
+        style="resize:none;"
+      > </textarea>
+      </td>
+
+    <td>
+      
+      <input type="number" name="claveCUCOPR${i}" class="input_tabla"> </input>
+
+      </td>
+
+
+
+    <td>
+      <textarea
+        name="especificacionesR${i}"
+        class="auto-expand input_tabla"
+        rows="1"
+        style="resize:none;"
+      > </textarea>
+    </td>
+
+    <td>
+      <select id="justificacionR${i}" name="justificacionR${i}" class="tabla_select">
+                   <option value="">-- Selecciona una prioridad--</option>
+                   <option value="Equipo no Existente">Equipo no Existente</option>
+                   <option value="Sustitución">Sustitución</option>
+                   <option value="Complemento">Complemento</option>
+      </select>
+    </td>
+
+    
+    
+     <td>
+
+      <input type="number" name="precioR${i}" class="input_tabla"> </input>
+
+      </td>
+    
+    <td>
+      <select id="prioridadR${i}" name="prioridadR${i}" placeholder="   " class="tabla_select">
+                   <option value="">-- Selecciona una prioridad--</option>
+                   <option value="Baja">Baja</option>
+                   <option value="Media">Media</option>
+                   <option value="Alta">Alta</option>
+                   <option value="Urgente">Urgente</option> 
+      </select>
+    </td>
+
+    `;
+
+  tbody.appendChild(fila);
+
+  generarNivel();
+  generarDependencia();
+  activarAutoExpand(fila);
+}    
+function obtenerNumeroFila(){
+  return document.querySelectorAll("#tablaBody tr").length + 1;
+}
+function activarAutoExpand(fila){
+  const textareas = fila.querySelectorAll(".auto-expand");
+  textareas.forEach(textarea => {
+    textarea.addEventListener("input", () => {
+      textarea.style.height = "auto";
+      textarea.style.height = textarea.scrollHeight + "px";
+    });
+  });
+}
+
+document.getElementById("miFormulario").addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+    }
+  });
+
+
+
+//Guardado de Datos    
+    
+ const form = document.getElementById("miFormulario");
  const aviso = document.getElementById("aviso");   
     document.getElementById("miFormulario").addEventListener("submit", function(e){
                 e.preventDefault();
@@ -560,4 +721,3 @@ const form = document.getElementById("miFormulario");
   })
   .catch(() => alert("Error al enviar"));
 });
-
