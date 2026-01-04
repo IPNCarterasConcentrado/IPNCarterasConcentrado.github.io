@@ -52,8 +52,9 @@ input,textarea, select{
     width:100%;
     box-sizing:border-box;
     padding:6px 6px;
-    margin-bottom: 10px;*/
-    border:none;
+    margin-bottom: 10px;
+    border-radius:6px;
+    
    /* border-left: 2px solid #f00;*/
 /*    box-shadow:2px 3px 15px #9d2449;*/
     background-color: #fff;
@@ -61,7 +62,7 @@ input,textarea, select{
     color:#000;
 }
 textarea{
-    min-width: 100%;   
+    width: 100%;   
     resize:none;
    /* min-height: 20px;*/
     font-family: sans-serif;
@@ -101,6 +102,7 @@ legend{
     padding: 0 6px;
     background-color: #611232;
     color:#fff;
+    border-radius: 20px;
 }
 a{
     color:#69f;
@@ -121,6 +123,7 @@ label{
     box-shadow:2px 3px 15px #fff;
     */
     color:#fff;
+    border-radius: 20px;
     
 }
 
@@ -156,11 +159,13 @@ img{
 }
 th{
     background-color:#9d2449;
+    border-radius: 8px;
 }
 td{
     padding:0;
     background-color:#fff;
     color:#000;
+    border-radius: 8px;
 }
 /*.datos{
     display: grid;
@@ -207,6 +212,7 @@ button{
     width:800px;
     display: block;
     margin: 20px auto;
+    border-radius: 35px;
 }
 p{
        margin: 0 25% ;
@@ -222,4 +228,3 @@ td .input_tabla{
     border: none;
     margin: 0;
 }
-
