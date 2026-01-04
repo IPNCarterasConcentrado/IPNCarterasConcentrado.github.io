@@ -14,19 +14,20 @@
 </head>
 <body>
     <div class="imagenes">
-  <img src="IzquierdaEncabezado.jpg" alt="IPN" title="Izq">
-  <img src="CentroEncabezado.png" alt="IPN" title="Cent">
-  <img src="DerechaEncabezado.jpg" alt="IPN" title="Izq">
+  <img src="IzquierdaEncabezado.jpg" alt="IPN" title="SECRETARIA DE EDUCACIÓN PÚBLICA">
+  <img src="CentroEncabezado.png" alt="IPN" title="INSTITUTO POLITECNICO NACIONAL">
+  <img src="DerechaEncabezado.jpg" alt="IPN" title="COORDINACIÓN GENERAL DE PLANEACIÓN E INFORMACIÓN INSTITUCIONAL">
 </div>
 <form id="miFormulario">
-   <h1>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026)</h1>
+    
+   <h1>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026) VF-1.06</h1>
 <div class="datos">
    <fieldset>
-    <legend>Información General Test 5.42</legend>
+    <legend>Información General </legend>
     
     <div class="form_input">
       <label for="secretaria">Secretaría</label>
-      <select id="secretaria" name="secretaria" placeholder="   ">
+      <select id="secretaria" name="secretaria" placeholder="   " required>
                    <option value="">-- Selecciona un nivel--</option>
                    <option value="SG">Secretaría General</option>
                    <option value="DG">Dirección General</option>
@@ -43,20 +44,20 @@
 
     <div class="form_input">
          <label for="direccion">Dirección</label>   
-             <select id="direccion" name="direccion" disabled>
+             <select id="direccion" name="direccion" disabled required>
              <option value="">-- Selecciona un dirección--</option>
              </select>
     </div>
      
     <div class="form_input">
           <label for="nivel">Nivel/Área/otro</label>   
-             <select id="nivel" name="nivel" disabled>
+             <select id="nivel" name="nivel" disabled required>
              <option value="">-- Selecciona un nivel--</option>
              </select>
             </div>
     <div class="form_input">    
              <label for="dependencia">Dependencia</label>
-             <select name="dependencia" id="dependencia" disabled>
+             <select name="dependencia" id="dependencia" disabled required>
                <option value="">-- Selecciona primero una categoría --</option>
              </select>
     </div> 
@@ -69,46 +70,47 @@
 
 
 <div class="form_input">
-      <label for="ubicacion">Ubicación(Domicilio)</label>
-      <input id="ubicacion" name="ubicacion" placeholder="DPO@ipn.mx">
+      <label for="ubicacion">Ubicación (Domicilio-Sede)</label>
+      <input id="ubicacion" name="ubicacion" placeholder="Domicilio de la Sede" required>
     </div>
 
     <div class="form_input">
       <label for="titular">Titular</label>
-      <input id="titular" name="titular" placeholder="Nombre del Titular">
+      <input id="titular" name="titular" placeholder="Titular " required>
     </div>
 
     <div class="form_input">
       <label for="telefonoTitular">Teléfono Titular</label>
-      <input id="telefonoTitular" name="telefonoTitular" placeholder="telefono del Titular ">
+      <input id="telefonoTitular" name="telefonoTitular" placeholder="telefono del Titular " type="tel" required>
     </div>
 
     <div class="form_input">
       <label for="correoTitular">Correo Titular</label>
-      <input id="correoTitular" name="correoTitular" placeholder="correo del Titular ">
+      <input id="correoTitular" name="correoTitular" placeholder="correo del Titular " type="email" required>
     </div>
     
     <div class="form_input">
-      <label for="responsable">Responsable de llenado(Capítulo 5000)</label>
-      <input id="responsable" name="responsable" placeholder="Nombre del responsable ">
+      <label for="responsable">Responsable de llenado (Capítulo 5000)</label>
+      <input id="responsable" name="responsable" placeholder="responsable " required>
     </div>
 
 
     <div class="form_input">
       <label for="telefonoResponsable">Teléfono Responsable</label>
-      <input id="telefonoResponsable" name="telefonoResponsable" placeholder="telefono del Responsable ">
+      <input id="telefonoResponsable" name="telefonoResponsable" placeholder="telefono del Responsable " type="tel" required>
     </div>
 
     <div class="form_input">
       <label for="correoResponsable">Correo Responsable</label>
-      <input id="correoResponsable" name="correoResponsable" placeholder="correo del Responsable ">
+      <input id="correoResponsable" name="correoResponsable" placeholder="correo del Responsable " type="email" required>
     </div>
   
 </fieldset>
 </div>
-
-  <button type="submit">Enviar</button>
-   <p id="aviso"></p>
+<div class="botones"> 
+   <button type="button" onclick="agregarFila()">➕ Añadir fila</button>
+</div>
+  
 <table class="tabla_style">
   <thead>
                                <tr>
@@ -161,6 +163,9 @@
                         </tbody>     
 </table>
 
+<button type="submit">Enviar</button>
+
+<p id="aviso"></p>
 
 
     
@@ -173,8 +178,8 @@
 
 
 
-
 </html>
+
 
 
 
