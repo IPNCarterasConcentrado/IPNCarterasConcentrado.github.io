@@ -36,13 +36,15 @@
         <li>En cuanto a la tabla para capturar el equipo, en cuanto se captura el nombre de un equipo el resto de los rubros de ese renglon se hacen obligatorios de capturar, de no ser llenados el formulario no puede ser enviado.</li>
     </ul> 
    </p>
-    <div class="datos">
-   <fieldset>
-    <legend>Información General </legend>
+    <table>
+ <tr>
+  <td>
+  <fieldset>
+    <legend>Información General Test 5.35</legend>
     
     <div class="form_input">
       <label for="secretaria">Secretaría</label>
-      <select id="secretaria" name="secretaria" placeholder="   " required>
+      <select id="secretaria" name="secretaria" placeholder="   "  >
                    <option value="">-- Selecciona un nivel--</option>
                    <option value="SG">Secretaría General</option>
                    <option value="DG">Dirección General</option>
@@ -59,26 +61,27 @@
 
     <div class="form_input">
          <label for="direccion">Dirección</label>   
-             <select id="direccion" name="direccion" disabled required>
+             <select id="direccion" name="direccion" disabled >
              <option value="">-- Selecciona un dirección--</option>
              </select>
     </div>
      
     <div class="form_input">
           <label for="nivel">Nivel/Área/otro</label>   
-             <select id="nivel" name="nivel" disabled required>
+             <select id="nivel" name="nivel" disabled >
              <option value="">-- Selecciona un nivel--</option>
              </select>
             </div>
     <div class="form_input">    
              <label for="dependencia">Dependencia</label>
-             <select name="dependencia" id="dependencia" disabled required>
+             <select name="dependencia" id="dependencia" disabled >
                <option value="">-- Selecciona primero una categoría --</option>
              </select>
     </div> 
 
   </fieldset>
-
+ </td>
+  <td>
 <fieldset>
 
   <legend>Información de Contacto </legend>
@@ -86,42 +89,44 @@
 
 <div class="form_input">
       <label for="ubicacion">Ubicación (Domicilio-Sede)</label>
-      <input id="ubicacion" name="ubicacion" placeholder="Domicilio de la Sede" required>
+      <input id="ubicacion" name="ubicacion" placeholder="Domicilio de la Sede" >
     </div>
 
     <div class="form_input">
       <label for="titular">Titular</label>
-      <input id="titular" name="titular" placeholder="Titular " required>
+      <input id="titular" name="titular" placeholder="Titular " >
     </div>
 
     <div class="form_input">
       <label for="telefonoTitular">Teléfono Titular</label>
-      <input id="telefonoTitular" name="telefonoTitular" placeholder="telefono del Titular " type="tel" required>
+      <input id="telefonoTitular" name="telefonoTitular" placeholder="telefono del Titular " type="tel" >
     </div>
 
     <div class="form_input">
       <label for="correoTitular">Correo Titular</label>
-      <input id="correoTitular" name="correoTitular" placeholder="correo del Titular " type="email" required>
+      <input id="correoTitular" name="correoTitular" placeholder="correo del Titular " type="email" >
     </div>
     
     <div class="form_input">
       <label for="responsable">Responsable de llenado (Capítulo 5000)</label>
-      <input id="responsable" name="responsable" placeholder="responsable " required>
+      <input id="responsable" name="responsable" placeholder="responsable " >
     </div>
 
 
     <div class="form_input">
       <label for="telefonoResponsable">Teléfono Responsable</label>
-      <input id="telefonoResponsable" name="telefonoResponsable" placeholder="telefono del Responsable " type="tel" required>
+      <input id="telefonoResponsable" name="telefonoResponsable" placeholder="telefono del Responsable " type="tel" >
     </div>
 
     <div class="form_input">
       <label for="correoResponsable">Correo Responsable</label>
-      <input id="correoResponsable" name="correoResponsable" placeholder="correo del Responsable " type="email" required>
+      <input id="correoResponsable" name="correoResponsable" placeholder="correo del Responsable " type="email" >
     </div>
   
 </fieldset>
-</div>
+</td>
+</tr>
+</table>
 <div class="botones"> 
    <button type="button" onclick="agregarFila()">➕ Añadir fila</button>
 </div>
@@ -194,6 +199,7 @@
 
 
 </html>
+
 
 
 
