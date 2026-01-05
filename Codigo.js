@@ -71,9 +71,10 @@ for (let i = 1; i <= 10; i++) {
 
       <div class="precio-wrapper">
             <span class="peso">$</span>
-            <input type="number" step="0.01"
+            <input type="text"
                    name="precioR${i}"
                    class="input_tabla precio"
+                   oninput="formatearMiles(this)"
                    inputmode="decimal" 
                    aria-label="Precio"> 
             </input>
@@ -648,9 +649,10 @@ function agregarFila(){
 
       <div class="precio-wrapper">
             <span class="peso">$</span>
-            <input type="number" step="0.01"
+            <input type="text"
                    name="precioR${i}"
                    class="input_tabla precio"
+                   oninput="formatearMiles(this)"
                    inputmode="decimal" 
                    aria-label="Precio"> 
             </input>
@@ -677,6 +679,25 @@ function agregarFila(){
 }    
 function obtenerNumeroFila(){
   return document.querySelectorAll("#tablaBody tr").length + 1;
+}
+function formatearMiles(input) {
+  // Quitar todo menos números y punto
+  let valor = input.value.replace(/[^0-9.]/g, "");
+
+  // Evitar más de un punto decimal
+  const partes = valor.split(".");
+  if (partes.length > 2) {
+    valor = partes[0] + "." + partes.slice(1).join("");
+  }
+  // Separar parte entera y decimal
+  let [entero, decimal] = valor.split(".");
+
+  // Agregar separador de miles
+  entero = entero.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+  input.value = decimal !== undefined
+    ? `${entero}.${decimal.slice(0,2)}`
+    : entero;
 }
 function activarAutoExpand(fila){
   const textareas = fila.querySelectorAll(".auto-expand");
@@ -741,6 +762,7 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
