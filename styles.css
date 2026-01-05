@@ -316,3 +316,20 @@ th {
     padding-left:10px;
     padding-right:10px;
 }
+
+.precio-wrapper {
+  position: relative;
+}
+
+.precio-wrapper .peso {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  font-weight: bold;
+}
+
+.precio-wrapper input {
+  padding-left: 20px; /* espacio para el $ */
+}
