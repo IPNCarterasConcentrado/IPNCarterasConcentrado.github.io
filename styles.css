@@ -1,4 +1,3 @@
-/* GLOBAL */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,7 +12,7 @@ body, html {
 body{
     margin:0;
      font-family: sans-serif;
-     background-color:#222;
+    /* background-color:#222;*/
      color:#000;
 
      /* background:linear-gradient(to bottom,#fff,#9d2449);*/
@@ -23,7 +22,6 @@ body{
      background-color: #DCDCDE;
 
 }
-
 
 /* ENCABEZADOS */
 h1 {
@@ -58,8 +56,9 @@ fieldset {
     padding: 15px;
     border: 1px solid #f04d69;
     border-radius: 5px;
-    background-color: #eee;
+    background-color: #DCDCDE;
     color: #000;
+
 }
 
 legend {
@@ -81,10 +80,13 @@ label {
 input, textarea, select {
     width: 100%;
     padding: 6px;
+    font-family: sans-serif;
     border-radius: 6px;
     background-color: #fff;
     color: #000;
-    border: 1px solid #ccc;
+    border:none;
+    border-bottom: 1px solid #ccc;
+     
 }
 
 textarea {
@@ -137,7 +139,7 @@ textarea {
 .tabla_style {
     width: 100%;       /* ocupa todo el ancho disponible del formulario */
     margin: 0;         /* sin márgenes extras */
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
 }
 
 th {
@@ -152,11 +154,14 @@ td {
     color: #000;
     border-radius: 8px;
     padding: 8px;
+    border: 1px solid #000;
 }
 
 .input_tabla {
     width: 100%;
-    border: none;
+    /*border: none;*/
+    border-bottom:1px solid #DDC9A3;
+    border-radius: 0;
 }
 
 .input_tabla:focus {
@@ -179,16 +184,33 @@ p {
 
 
 
-
 /* OTRAS CLASES */
 .checkbox {
     width: auto;
     height: 10px;
 }
+
+.auto-expand {
+    width: 100%;
+    min-height: 40px;
+    resize: none;
+    overflow: hidden;
+}
+/*
 .fijasCol{
     width:60px;
+/*   border:solid #ccc;*/
+/*
+    border-radius: 8px;
+    border-bottom: solid #ccc;
 }
-
+.cantidadCol{
+    width:10px;
+}
+.equipo{
+    width:150px;
+}
+*/
 @media (max-width: 768px) {
     p {
         margin: 0 10px;
@@ -198,18 +220,96 @@ p {
     }
     fieldset {
         width: 100%;
-        margin-left: 10px; /* separa verticalmente */
+       /* margin-left: 10px; /* separa verticalmente 
+        margin-right:10px; /* separa verticalmente */
     }
+    /*
     .fijasCol{
     width:10px;
+    }
+    .cantidadCol{
+    width:5px;
+    }
+    .equipo{
+    width:120px;
+    }
+    */
+
 }
+/*input,textarea{
+    border:1px;
+}
+*/
+.tabla_style th:nth-child(1),
+.tabla_style td:nth-child(1){
+    width: 8%;
+    min-width: 96px;
+}
+.tabla_style th:nth-child(2),
+.tabla_style td:nth-child(2){
+    width: 8%;
+    min-width: 96px;
+}
+.tabla_style th:nth-child(3),
+.tabla_style td:nth-child(3){
+    width: 12.8%;
+    min-width: 154px;
+}
+.tabla_style th:nth-child(4),
+.tabla_style td:nth-child(4){
+    width: 8.2%;
+    min-width: 98px;
+}
+.tabla_style th:nth-child(5),
+.tabla_style td:nth-child(5){
+    width: 9%;
+    min-width: 108px;
+}
+.tabla_style th:nth-child(6),
+.tabla_style td:nth-child(6){
+    width: 8%;
+    min-width: 96px;
+}
+.tabla_style th:nth-child(7),
+.tabla_style td:nth-child(7){
+    width: 14%;
+    min-width: 168px;
+}
+.tabla_style th:nth-child(8),
+.tabla_style td:nth-child(8){
+    width: 12%;
+    min-width: 144px;
+}
+.tabla_style th:nth-child(9),
+.tabla_style td:nth-child(9){
+    width: 12%;
+    min-width: 144px;
+}
+.tabla_style th:nth-child(10),
+.tabla_style td:nth-child(10){
+    width: 8%;
+    min-width: 96px;
+}
+th {
+  white-space: normal;   /* permite saltos de línea */
+  word-break: break-word;
+  text-align: center;    /* opcional */
+}
+.datos td{
+     vertical-align: top;
+     background-color: #DCDCDE;
+     border:1px solid #DCDCDE;
+}
+.datos td:nth-child(1){
+    width: 40%;
+    min-width: 600px;
+    padding-left:10px;
+    padding-right:10px;
     
 }
-
-
-.auto-expand {
-    width: 100%;
-    min-height: 40px;
-    resize: none;
-    overflow: hidden;
+.datos td:nth-child(2){
+    width: 40%;
+    min-width: 600px;
+    padding-left:10px;
+    padding-right:10px;
 }
