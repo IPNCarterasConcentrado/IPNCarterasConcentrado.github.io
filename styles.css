@@ -43,12 +43,14 @@ form {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px 40px;
     background-color: transparent;
     border-radius: 8px;
     color: #fff;
 }
-
+.numeracion{
+    padding-left: 20px;
+}
 /* FIELDSETS */
 fieldset {
     width: 100%;
@@ -179,7 +181,8 @@ button {
 
 /* PÁRRAFOS */
 p {
-    margin: 0 25%;
+    margin: 10px;
+    padding-left:50px;
 }
 
 
