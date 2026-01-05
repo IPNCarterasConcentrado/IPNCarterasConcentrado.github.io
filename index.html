@@ -20,15 +20,25 @@
 </div>
 <form id="miFormulario">
     
-   <h1>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026) VF-1.20</h1>
+   <h1>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026) VF-1.16</h1>
 <h2>Intrucciones</h2>
    <p>
-    <ul> 
-        <li>Este formulario esta hecho para capturar solo una vez la petición una vez que se haya enviado esta solicitud no puede ser aumentada, corregida ni capturada por segunda vez.</li>
-        <li>Cada campo de la información general debe ser llenado,asi como los campos de la información de contacto.</li>
-        <li>En cuanto a la tabla existen 2 maneras de agregar filas para poder capturar mas equipos:
-        <ol> 
-              <li>Terminando de capturar la última fila existente.</li>
+   
+    <ul>
+      <li>Este formulario está diseñado para capturar la solicitud una sola vez. Después de su envío, no podrá ser modificada, corregida ni registrada nuevamente.</li> 
+       <li>Todos los campos correspondientes a la sección de Información General y a la Información de Contacto, deben completarse obligatoriamente.</li>
+       <li>En la tabla existen dos formas de agregar filas para capturar más equipos:
+           <ol>
+               <li>Al finalizar la captura de la última fila existente.</li>
+               <li>Mediante el botón “Agregar fila”.</li>
+           </ol> 
+       </li>
+      <li>En la tabla de captura de equipos, al registrar el nombre de un equipo, todos los demás campos de este renglón se vuelven obligatorios. Si alguno queda sin completar, el formulario no podrá enviarse.</li>	
+    </ul>    
+    
+     
+         
+              
               <li>Usar el boton de agregar fila.</li>
         </ol>
         </li>
@@ -36,8 +46,10 @@
     </ul> 
    </p>
     
-    <div class="datos">
-   <fieldset>
+    <table class="datos">
+   <tr>
+    <td>
+      <fieldset>
     <legend>Información General </legend>
     
     <div class="form_input">
@@ -78,7 +90,8 @@
     </div> 
 
   </fieldset>
-
+    </td>
+    <td>
 <fieldset>
 
   <legend>Información de Contacto </legend>
@@ -121,7 +134,14 @@
     </div>
   
 </fieldset>
-</div>
+</td>
+
+
+
+   </tr>
+      
+
+</table>
 <div class="botones"> 
    <button type="button" onclick="agregarFila()">➕ Añadir fila</button>
 </div>
@@ -129,41 +149,41 @@
 <table class="tabla_style">
   <thead>
                                <tr>
-                                    <th>
-                                         Nivel /Área/otro  
+                                    <th title="Nivel/Área/otro">
+                                         Nivel/Área/otro  
                                     </th>
                 
-                                    <th>
+                                    <th title="Dependencia">
                                          Dependencia
                                     </th>   
 
-                                    <th>
+                                    <th class="equipo" title="Nombre del Equipo">
                                          Nombre del Equipo
                                     </th>
-                                    <th class="cantidadCol">
+                                    <th class="cantidadCol" title="Cantidad">
                                         Cantidad
                                     </th>
-                                    <th>
+                                    <th title="Marca /Modelo">
                                         Marca /Modelo
                                     </th>
 
-                                    <th>
+                                    <th title="Clave CUCOP">
                                         Clave CUCOP
                                     </th>
 
-                                    <th>
+                                    <th title="Especificaciones Tecnicas">
                                         Especificaciones Tecnicas
                                     </th> 
                                     
-                                    <th>
+                                    <th title="Justificación (Equipo no Existente, Sustitución o Complemento)">
                                         Justificación (Equipo no Existente, Sustitución o Complemento)
                                     </th>
 
-                                    <th>
+                                    <th title="Precio de referencia">
                                          Precio de referencia
                                     </th>
                      
-                                    <th>
+                                    <th title="Prioridad (Baja, Media, Alta, Urgente)">
                                         Prioridad (Baja, Media, Alta, Urgente)
                                     </th>
 
@@ -194,10 +214,6 @@
 
 
 </html>
-
-
-
-
 
 
 
