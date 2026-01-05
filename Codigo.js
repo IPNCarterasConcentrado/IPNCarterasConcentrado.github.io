@@ -69,12 +69,15 @@ for (let i = 1; i <= 10; i++) {
     
      <td>
 
-      <input type="text"
-             name="precioR${i}"
-             class="input_tabla precio"
-             inputmode="decimal" 
-             aria-label="Precio"> </input>
-
+      <div class="precio-wrapper">
+            <span class="peso">$</span>
+            <input type="number" step="0.01"
+                   name="precioR${i}"
+                   class="input_tabla precio"
+                   inputmode="decimal" 
+                   aria-label="Precio"> 
+            </input>
+      </div>
       </td>
     
     <td>
@@ -643,12 +646,15 @@ function agregarFila(){
     
      <td>
 
-      <input type="text"
-             name="precioR${i}"
-             class="input_tabla precio"
-             inputmode="decimal" 
-             aria-label="Precio"> </input>
-
+      <div class="precio-wrapper">
+            <span class="peso">$</span>
+            <input type="number" step="0.01"
+                   name="precioR${i}"
+                   class="input_tabla precio"
+                   inputmode="decimal" 
+                   aria-label="Precio"> 
+            </input>
+      </div>
       </td>
     
     <td>
@@ -716,7 +722,7 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
                                  body: new FormData(this)
                 })*/
                 
-                 fetch("https://script.google.com/macros/s/AKfycbweIlGNMWF8ygoJLliL8jxzM0U-we7i64H1sDam6EdPDrXnRC9KxvbaJho079tawLcK3g/exec", {
+                 fetch("https://script.google.com/macros/s/AKfycbzi3JoceFxuTOWPAkxJYxvpE21salHXe_Wds66_VHQrUUpdxhxQwf0YFU09s2H9T3mlkA/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -735,5 +741,6 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
