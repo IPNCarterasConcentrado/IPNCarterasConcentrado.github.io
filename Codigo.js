@@ -722,7 +722,7 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
                                  body: new FormData(this)
                 })*/
                 
-                 fetch("https://script.google.com/macros/s/AKfycbys4uaPRgera3oDH4b0-V9ykThjuh3W9hAIiTL4zux9Y2NpbVVDPohcxewO9amlvZ_2sQ/exec", {
+                 fetch("https://script.google.com/macros/s/AKfycbwk10xInTUpzXbagna9BVLxNMs1hVIpC-4UUi51_HOx9HAxDp_zBH4Cx0XWOokqAw1JDg/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -741,6 +741,7 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
