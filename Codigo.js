@@ -379,8 +379,8 @@ ADMIN_DFLE_PD:["Dirección de Formación en Lenguas Extranjeras"],
 ADMIN_DFIE_PD:["Dirección de Formación e Innovación Educativa"],
 ADMIN_DEV_PD:["Dirección de Educación Virtual"],
 //Secretaria Academica
-NMS: ['CET 1 "WALTER CROSS BUCHANAN"',
-'CENTRO DE ESTUDIOS CIENTÍFICOS Y TECNOLÓGICOS (CECYT 1) "GONZALO VÁZQUEZ VELA"',
+NMS: ['CET 1 "WALTER CROSS BUCHANAN"','CECYT 1 "GONZALO VÁZQUEZ VELA"',
+'CECYT 2 "MIGUEL BERNARD"',
 'CECYT 3 “ESTANISLAO RAMÍREZ RUIZ”',
 'CECYT 4 “LÁZARO CÁRDENAS”',
 'CECYT 5 “BENITO JUÁREZ”',
@@ -762,6 +762,7 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
