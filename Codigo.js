@@ -39,14 +39,6 @@ for (let i = 1; i <= 10; i++) {
       </td>
 
     <td>
-      
-      <input type="number" name="claveCUCOPR${i}" class="input_tabla" aria-label="Clave CUCOP"> </input>
-
-      </td>
-
-
-
-    <td>
       <textarea
         name="especificacionesR${i}"
         class="auto-expand input_tabla"
@@ -617,11 +609,6 @@ function agregarFila(){
       </td>
 
     <td>
-      
-      <input type="number" name="claveCUCOPR${i}" class="input_tabla" aria-label="Clave CUCOP"> </input>
-
-      </td>
-
 
 
     <td>
@@ -762,6 +749,7 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
