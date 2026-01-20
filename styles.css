@@ -270,13 +270,13 @@ p {
 }
 .tabla_style th:nth-child(6),
 .tabla_style td:nth-child(6){
-    width: 8%;
-    min-width: 96px;
+    width: 14%;
+    min-width: 168px;
 }
 .tabla_style th:nth-child(7),
 .tabla_style td:nth-child(7){
-    width: 14%;
-    min-width: 168px;
+    width: 12%;
+    min-width: 144px;
 }
 .tabla_style th:nth-child(8),
 .tabla_style td:nth-child(8){
@@ -285,11 +285,6 @@ p {
 }
 .tabla_style th:nth-child(9),
 .tabla_style td:nth-child(9){
-    width: 12%;
-    min-width: 144px;
-}
-.tabla_style th:nth-child(10),
-.tabla_style td:nth-child(10){
     width: 8%;
     min-width: 96px;
 }
@@ -333,3 +328,4 @@ th {
 .precio-wrapper input {
   padding-left: 20px; /* espacio para el $ */
 }
+
