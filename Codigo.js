@@ -928,7 +928,7 @@ document.getElementById("nuevoRegistro").addEventListener("click", () => {
                                  body: new FormData(this)
                 })*/
                 
-                 fetch("https://script.google.com/macros/s/AKfycbw5xA7aUNZNtIy_oEIT0t1HwkgtUIVw8MWMn8ALD4QGwe0HFc0SKZnU6IuhQBk6p6rBPQ/exec", {
+                 fetch("https://script.google.com/macros/s/AKfycbw0MESGpTtt-lCaAX4KbtNyQOw3VjzIvzv8bVwWpxDefNokuv-AB-OppZnkBOR0vwftHg/exec", {
                   method: "POST",
                   body: JSON.stringify(data)
   })
@@ -947,6 +947,7 @@ document.getElementById("nuevoRegistro").addEventListener("click", () => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
