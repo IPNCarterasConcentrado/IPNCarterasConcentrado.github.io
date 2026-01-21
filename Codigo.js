@@ -844,6 +844,20 @@ setTimeout(() => {
     setTimeout(() => {
       setSelectValue("dependencia", data.dependencia);
 
+      const titular = document.getElementById("titular");   
+      titular.value = data.titular;
+      const telTitular = document.getElementById("telefonoTitular");   
+      telTitular.value = data.telefonoTitular;
+      const CorreoTitular = document.getElementById("correoTitular");   
+      CorreoTitular.value = data.telefono;
+      const responsable = document.getElementById("responsable");   
+      responsable.value = data.responsable;
+      const telResponsable = document.getElementById("telefonoResponsable");   
+      telResponsable.value = data.telefonoResponsable;
+      const CorreoResponsable = document.getElementById("correoResponsable");   
+      CorreoResponsable.value = data.correoResponsable;
+
+      
       // ⬇️ Ahora sí, restaurar la tabla
       restaurarTabla(data);
     }, 0);
@@ -933,6 +947,7 @@ document.getElementById("nuevoRegistro").addEventListener("click", () => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
