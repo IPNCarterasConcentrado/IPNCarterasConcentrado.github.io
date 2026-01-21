@@ -771,6 +771,45 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
 });
 
 
+function setSelectValue(selectId, value) {
+  const select = document.getElementById(selectId);
+  if (!select) return;
+
+  select.value = value;
+  select.dispatchEvent(new Event("change"));
+}
+
+function restaurarTabla(data) {
+  const filas = data.__filas || 10;
+  const tbody = document.getElementById("tablaBody");
+  tbody.innerHTML = "";
+
+  for (let i = 1; i <= filas; i++) {
+    agregarFila();
+  }
+
+  Object.keys(data).forEach(name => {
+    if (name === "__filas") return;
+    if (!name.includes("R")) return; // solo campos de la tabla
+
+    const campo = document.querySelector(`[name="${name}"]`);
+    if (!campo) return;
+
+    campo.value = data[name];
+
+    if (campo.tagName === "TEXTAREA") {
+      campo.style.height = "auto";
+      campo.style.height = campo.scrollHeight + "px";
+    }
+  });
+
+  generarNivel();
+  generarDependencia();
+}
+
+
+
+
 document.getElementById("cargarBorrador").addEventListener("click", () => {
   const borrador = localStorage.getItem("borradorFormulario");
   if (!borrador) {
@@ -894,5 +933,6 @@ document.getElementById("nuevoRegistro").addEventListener("click", () => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
