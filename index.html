@@ -20,24 +20,24 @@
 </div>
 <form id="miFormulario">
     
-   <h1>PROGRAMA DE DIGNIFICACIÓN DE EQUIPAMIENTO INSTITUCIONAL 2026 (PDEI 2026)</h1>
-<h2>Intrucciones</h2>
+   <h1>PROGRAMA INSTITUCIONAL DE DETECCIÓN DE NECESIDADES DE EQUIPAMIENTO (PIDNE) 2026</h1>
+   <h2>OBJETIVO</h2>
+<p>Con el propósito de iniciar la conformación de Proyectos de Inversión correspondientes al Capítulo 5000, se presenta la Tabla de Registro de Necesidades. Este instrumento permitirá identificar, justificar y documentar de manera ordenada los requerimientos institucionales relacionados con la adquisición de equipamiento.</p>
+    <h2>DEFINICION DE CAPÍTULO 5000</h2>
+<p>El Capítulo 5000 del Clasificador Único de Contrataciones Públicas (CUCoP) corresponde a Bienes Muebles, Inmuebles e Intangibles, y se destina a la adquisición de mobiliario, equipo, vehículos, maquinaria, bienes científicos y demás activos indispensables para el adecuado funcionamiento y fortalecimiento de las dependencias públicas</p>
+   
+   <h2>Intrucciones</h2>
    <p>
       <ul>
-              <li>Este formulario está diseñado para capturar la solicitud una sola vez. Después de su envío, no podrá ser modificada, corregida ni registrada nuevamente.</li> 
-              <li>Todos los campos correspondientes a la sección de Información General y a la Información de Contacto, deben completarse obligatoriamente.</li>
-              <li >En la tabla existen dos formas de agregar filas para capturar más equipos:
-                  <ol class="numeracion">
-                      <li>Al finalizar la captura de la última fila existente.</li>
-                      <li>Mediante el botón “Agregar fila”.</li>
-                  </ol> 
-              </li>
-              <li>En la tabla de captura de equipos, al registrar el nombre de un equipo, todos los demás campos de este renglón se vuelven obligatorios. Si alguno queda sin completar, el formulario no podrá enviarse.</li>	
-              <li>En el campo <strong>“ Precio unitario de referencia ”</strong> se deberá registrar un monto estimado, el cual podrá obtenerse mediante <strong>consulta en línea en sitios web de proveedores especializados, catálogos electrónicos empresariales o fuentes públicas confiables</strong> vinculadas directamente con el equipo solicitado, sin que sea obligatorio contar con una cotización formal. </li>
+          <li>El formulario de solicitud está diseñado para capturar una sola vez. Después de su envío, no podrá ser modificado.</li>
+          <li>Todos los campos correspondientes a la sección de Información General y a la Información de Contacto, deben completarse obligatoriamente.</li>
+          <li>En la <strong>Tabla de Registro de Necesidades</strong>, las filas de llenado se generarán automáticamente al concluir la última fila existente.</li>
+          <li>Al registrar cada equipo, en la <strong>Tabla de Registro de Necesidades</strong>, deberán llenarse todos los campos de cada renglón. Si alguno queda sin completar, el formulario no podrá enviarse.</li>
+          <li>En el campo <strong>“Precio unitario de referencia”</strong> se deberá registrar un monto estimado, de fuentes confiables. No es obligatorio contar con una cotización formal.</li>
+
       </ul>    
      
    </p>
-
     
     <table class="datos">
    <tr>
@@ -46,24 +46,28 @@
     <legend>Información General </legend>
     
     <div class="form_input">
-      <label for="secretaria">Secretaría</label>
+      <label for="secretaria">Secretaría o Direccion General</label>
       <select id="secretaria" name="secretaria" placeholder="   " required>
                    <option value="">-- Selecciona un nivel--</option>
-                   <option value="SG">Secretaría General</option>
-                   <option value="DG">Dirección General</option>
-                   <option value="AG">Oficina del Abogado General</option>
-                   <option value="PD">Presidencia del Decanato</option>
-                   <option value="SACAD">Secretaría Académica</option>
-                   <option value="SADMIN">Secretaría de Administración</option>
-                   <option value="SIIS">Secretaría de Innovación e Integración Social</option>
-                   <option value="SIP">Secretaría de Investigación y Posgrado</option>
-                   <option value="SSE">Secretaría de Servicios Educativos</option>
-                   </select>
+                  <option value="CII">Coordinación de Imagen Institucional</option>
+                  <option value="CGPII">Coordinación General de Planeación e Información Institucional</option>
+                  <option value="DG">Dirección General</option>             
+                  <option value="AG">Oficina del Abogado General</option>
+                  <option value="PD">Presidencia del Decanato</option>   
+                  <option value="SACAD">Secretaría Académica</option>   
+                  <option value="SADMIN">Secretaría de Administración</option>        
+                  <option value="CENAC">Centro Nacional de Cálculo (CENAC)</option>          
+                  <option value="SIIS">Secretaría de Innovación e Integración Social</option>     
+                  <option value="SIP">Secretaría de Investigación y Posgrado</option>      
+                  <option value="SSE">Secretaría de Servicios Educativos</option>       
+                  <option value="SG">Secretaría General</option>    
+                  <option value="ER">Estación de Radiodifusión XHIPN-FM 95.7 MHz</option>
+                  </select>
       
     </div>
 
     <div class="form_input">
-         <label for="direccion">Dirección</label>   
+         <label for="direccion">Dirección o Coordinación</label>   
              <select id="direccion" name="direccion" disabled required>
              <option value="">-- Selecciona un dirección--</option>
              </select>
@@ -84,63 +88,66 @@
 
   </fieldset>
     </td>
+       
     <td>
 <fieldset>
 
-  <legend>Información de Contacto </legend>
+  <legend>Información del Titular </legend>
 
-
-<div class="form_input">
-      <label for="ubicacion">Ubicación (Domicilio-Sede)</label>
-      <input id="ubicacion" name="ubicacion" placeholder="Domicilio de la Sede" required>
-    </div>
 
     <div class="form_input">
       <label for="titular">Titular</label>
-      <input id="titular" name="titular" placeholder="Titular " required>
+      <input id="titular" name="titular" placeholder="Nombre completo" required>
     </div>
 
     <div class="form_input">
-      <label for="telefonoTitular">Extensión Titular</label>
-      <input id="telefonoTitular" name="telefonoTitular" placeholder="Extensión del Titular " type="tel" required>
+      <label for="telefonoTitular">Extensión</label>
+      <input id="telefonoTitular" name="telefonoTitular" placeholder="Extensión" type="tel" required>
     </div>
 
     <div class="form_input">
-      <label for="correoTitular">Correo Titular</label>
-      <input id="correoTitular" name="correoTitular" placeholder="correo del Titular " type="email" required>
+      <label for="correoTitular">Correo del Titular</label>
+      <input id="correoTitular" name="correoTitular" placeholder="correo " type="email" required>
     </div>
     
+    
+</fieldset>
+</td>
+
+<td>
+<fieldset>
+
+  <legend>Información del Responsable de Registro </legend>
+
+    
     <div class="form_input">
-      <label for="responsable">Responsable de llenado (Capítulo 5000)</label>
-      <input id="responsable" name="responsable" placeholder="responsable " required>
+      <label for="responsable">Nombre del Responsable </label>
+      <input id="responsable" name="responsable" placeholder="Nombre commpleto " required>
     </div>
 
 
     <div class="form_input">
-      <label for="telefonoResponsable">Extensión Responsable</label>
-      <input id="telefonoResponsable" name="telefonoResponsable" placeholder="Extensión del Responsable " type="tel" required>
+      <label for="telefonoResponsable">Extensión</label>
+      <input id="telefonoResponsable" name="telefonoResponsable" placeholder="Extensión " type="tel" required>
     </div>
 
     <div class="form_input">
-      <label for="correoResponsable">Correo Responsable</label>
-      <input id="correoResponsable" name="correoResponsable" placeholder="correo del Responsable " type="email" required>
+      <label for="correoResponsable">Correo</label>
+      <input id="correoResponsable" name="correoResponsable" placeholder="Correo " type="email" required>
     </div>
   
 </fieldset>
 </td>
-
-
+       
 
    </tr>
       
 
 </table>
-<div class="botones"> 
-   <button type="button" onclick="agregarFila()">➕ Añadir fila</button>
-</div>
-  
-<table class="tabla_style">
-  <thead>
+<fieldset class="TablaFS"> 
+  <legend class="TablaLeg" >Tabla de Registro de Necesidades</legend> 
+<table class="tabla_style" title="Tabla de Registro de Necesidades">
+<thead>
                                <tr>
                                     <th title="Nivel/Área/otro">
                                          Nivel/Área/otro  
@@ -159,21 +166,21 @@
                                     <th title="Marca /Modelo">
                                         Marca /Modelo
                                     </th>
-                                   
-                                    <th title="Especificaciones Tecnicas">
-                                        Especificaciones Técnicas
+
+                                    <th title=" Características Técnicas del Equipo">
+                                         Características Técnicas del Equipo
                                     </th> 
                                     
                                     <th title="Justificación (Equipo no Existente, Sustitución o Complemento)">
                                         Justificación (Equipo no Existente, Sustitución o Complemento)
                                     </th>
 
-                                    <th title="Precio de referencia">
+                                    <th title="Precio unitario de referencia">
                                          Precio unitario de referencia
                                     </th>
                      
-                                    <th title="Prioridad (Baja, Media, Alta, Urgente)">
-                                        Prioridad (Baja, Media, Alta, Urgente)
+                                    <th title="Prioridad (Baja, Media, Alta)">
+                                        Prioridad (Baja, Media, Alta)
                                     </th>
 
                                </tr>
@@ -186,7 +193,7 @@
                               
                         </tbody>     
 </table>
-
+</fieldset>
 <button type="submit">Enviar</button>
 
 <p id="aviso"></p>
@@ -203,13 +210,6 @@
 
 
 </html>
-
-
-
-
-
-
-
 
 
 
