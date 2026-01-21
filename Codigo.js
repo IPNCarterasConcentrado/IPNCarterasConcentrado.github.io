@@ -38,6 +38,9 @@ for (let i = 1; i <= 10; i++) {
         > </textarea>
       </td>
 
+    
+
+
     <td>
       <textarea
         name="especificacionesR${i}"
@@ -79,7 +82,6 @@ for (let i = 1; i <= 10; i++) {
                    <option value="Baja">Baja</option>
                    <option value="Media">Media</option>
                    <option value="Alta">Alta</option>
-                   <option value="Urgente">Urgente</option> 
       </select>
     </td>
 
@@ -146,38 +148,35 @@ textareas.forEach(textarea => {
 
 const secretarias={
 
-//    SSE:[{text:"Nivel Medio Superior", value:"NMS"} ,{text:"Nivel Superior",value:"NS"}],
-    
-    SG:[{text:"Dirección de Difusión Cultural",value:"DDC_SG"},
-        {text:"Coordinación Politécnica para la Sustentabilidad",value:"CPPS"},
-        {text:"Secretaría General",value:"SG"}],
+SG:[{text:"Unidad Politécnica de gestión con perspectiva de género (UPGPG)",value:"UPGPG"},
+        {text:"Secretaría General",value:"SG"},
+        {text:"Defensoría de los Derechos Politécnicos",value:"DDP"}],
+    /*  YA---------------------------------------------- */
     DG:[{text:"Dirección General", value:"DG"},
-        {text:"Coordinación de Imagen Institucional", value:"CII"},
-        {text:"Coordinación General de Planeación e Información Institucional", value:"CGPII"},
-        {text:"Dirección de Planeación y Organización", value:"DPO"},
-        {text:"Dirección de Información Institucional", value:"DII"},
-        {text:"Dirección de Cómputo y Comunicaciones", value:"DCC"},
-        {text:"Dirección de Sistemas Informáticos", value:"DSI"}],
-    
+        {text:"Coordinación Politécnica para la Sustentabilidad",value:"CPPS"}
+        ],
+    /*  YA---------------------------------------------- */
     AG:[{text:"Oficina del Abogado General",value:"AG"}],
-
-    PD:[{text:"Presidencia del Decanato", value:"PD"},
-        {text:"Dirección de Formación en Lenguas Extranjeras", value:"DFLE_PD"},
-        {text:"Dirección de Formación e Innovación Educativa", value:"DFIE"},
-        {text:"Dirección de Educación Virtual", value:"DEV"}],
-
+    /*  YA---------------------------------------------- */ 
+    PD:[{text:"Presidencia del Decanato", value:"PD"}],
+     /*  YA---------------------------------------------- */
     SACAD:[{text:"Dirección de Educación Media Superior", value:"DEMS"},
         {text:"Dirección de Educación Superior", value:"DES"},
         {text:"Dirección de Formación en Lenguas Extranjeras", value:"DFLE_SA"},
-        {text:"Secretaría Académica", value:"SACAD"}],
+        {text:"Secretaría Académica", value:"SACAD"},
+        {text:"Dirección de educación virtual", value:"DEV"},
+        {text:"Dirección de formación e innovación educativa", value:"DFIE"}],
+        
+
+     /*  YA---------------------------------------------- */
     SADMIN:[{text:"Secretaría de Administración",value:"SA"},
         {text:"Dirección de Capital Humano", value:"DCH"},
         {text:"Dirección de Programación y Presupuesto", value:"DPP"},
         {text:"Dirección de Recursos Financieros", value:"DRF"},
         {text:"Dirección de Recursos Materiales e Infraestructua", value:"DRMI"},
         {text:"Dirección de Servicios Generales", value:"DSG"},
-        {text:"Coordinación de Centros de Desarrollo Infantil", value:"CCDI"},
-        {text:"Coordinación General del Centro Nacional de Cálculo (CENAC)", value:"CGCENAC"}],
+        {text:"Coordinación de Centros de Desarrollo Infantil", value:"CCDI"}],
+     /*  YA---------------------------------------------- */
     SIIS:[{text:"Dirección de Vinculación y Desarrollo Regional", value:"DVDR"},
           {text:"Secretaría de Innovación e Integración Social", value:"SIIS"},
           {text:"Dirección de Egresados y Servicio Social", value:"DESS"},
@@ -185,16 +184,29 @@ const secretarias={
           {text:"Dirección de Servicios Empresariales y Transferencia Tecnológica", value:"DSETT"},
           {text:"Dirección de Incubación de Empresas Tecnológicas", value:"DIET"},
           {text:"Dirección de Prospectiva e Inteligencia Tecnológica Tecnópoli", value:"DPITT"}],
+    /*  YA---------------------------------------------- */
     SIP:[{text:"Dirección de Investigación", value:"DI"},
          {text:"Secretaría de Investigación y Posgrado", value:"SIP"},
          {text:"Dirección de Posgrado", value:"DP"},
-         {text:"Dirección de Difusión de Ciencia y Tecnología", value:"DDCT"}],
+         {text:"Dirección de Difusión de Ciencia y Tecnología", value:"DDCT"},
+         {text:"Dirección de Investigación / Dirección de Posgrado", value:"DI_DP"}],
+
     SSE:[{text:"Secretaría de Servicios Educativos", value:"SSE"},
          {text:"Dirección de Administración Escolar", value:"DAES"},
          {text:"Dirección de Difusión Cultural", value:"DDC_SE"},
          {text:"Dirección de Actividades Deportivas", value:"DAD"},
          {text:"Dirección de Bibliotecas y Publicaciones", value:"DBP"},
-         {text:"Dirección de Apoyos a Estudiantes", value:"DAE"}],    
+         {text:"Dirección de Apoyos a Estudiantes", value:"DAE"}],
+   /*YA                    */
+   CGPII:[{text:"Coordinación General de Planeación e Información Institucional", value:"CGPII"},
+           {text:"Dirección de información institucional", value:"DII"},
+           {text:"Dirección de Planeación y Organización", value:"DPO"}],         
+   /*  YA                 */ 
+   CII:[{text:"Coordinación de Imagen Institucional", value:"CII"}],
+   /* YA                  */
+   CENAC:[{text:"Centro Nacional de Cálculo (CENAC)", value:"CGCENAC"}],  
+   /*YA */   
+    ER:[{text:"Estación de Radiodifusión XHIPN-FM 95.7 MHz", value:"ER"}]    
 }
 
 
@@ -225,48 +237,38 @@ secretariaInput.addEventListener("change", () => {
 
 
 const direcciones={
-        //Secretaria General
-    DDC_SG:[{text:"Administrativo", value:"ADMIN_DDC_SG"}],
+           //Secretaria General
+    UPGPG:[{text:"Administrativo", value:"ADMIN_UPGPG"}],
 
-    CPPS:[{text:"Administrativo", value:"ADMIN_CPPS_SG"} ],
+    DDP:[{text:"Administrativo", value:"ADMIN_DDP"} ],
 
     SG:[{text:"Administrativo", value:"ADMIN_SG_SG"}],
 
 //Direccion General
     DG:[{text:"Administrativo", value:"ADMIN_DG_DG"}],
 
-    CII:[{text:"Administrativo", value:"ADMIN_CII_DG"}],
-
-    CGPII:[{text:"Administrativo", value:"ADMIN_CGPII_DG"}],
-
-    DPO:[{text:"Administrativo", value:"ADMIN_DPO_DG"}],
-
-    DII:[{text:"Administrativo", value:"ADMIN_DII_DG"}],
-
-    DCC:[{text:"Administrativo", value:"ADMIN_DCC_DG"}],
-
-    DSI:[{text:"Administrativo", value:"ADMIN_DSI_DG"}],
+    CPPS:[{text:"Administrativo", value:"ADMIN_CPPS"}],
+    
 //Abogado General
     AG:[{text:"Administrativo", value:"ADMIN_AG_AG"}],
 //Presidencia del Decanato
     PD:[{text:"Administrativo", value:"ADMIN_PD_PD"}],
 
-    DFLE_PD:[{text:"Administrativo", value:"ADMIN_DFLE_PD"}],
-
-    DFIE:[{text:"Administrativo", value:"ADMIN_DFIE_PD"}],
-
-    DEV:[{text:"Administrativo", value:"ADMIN_DEV_PD"}],
-
 //Secretaria Academica 
    
     DEMS:[{text:"Nivel Medio Superior", value:"NMS"},{text:"Administrativo", value:"ADMIN_NMS"}],
 
-    DES:[{text:"Nivel Superior y Posgrado", value:"NS"},{text:"Administrativo", value:"ADMIN_NS"}],
+    DES:[{text:"Nivel Superior", value:"NS"},{text:"Administrativo", value:"ADMIN_NS"}],
 
-    DFLE_SA:[{text:"Lenguas", value:"L_DFLE_SA"}],
+    DFLE_SA:[{text:"Lenguas", value:"L_DFLE_SA"},{text:"Administrativo", value:"ADMIN_DFLE_SA"}],
+
+    DEV:[{text:"Administrativo", value:"ADMIN_DEV_SA"}],
+
+    DFIE:[{text:"Administrativo", value:"ADMIN_DFIE_SA"}],
 
     SACAD:[{text:"Administrativo", value:"ADMIN_SACAD_SACAD"}],
-//Secretaria Administrativa
+
+    //Secretaria Administrativa
     SA:[{text:"Administrativo", value:"ADMIN_SA_SA"}],
     
     DCH:[{text:"Administrativo", value:"ADMIN_DCH_SA"}],
@@ -281,7 +283,7 @@ const direcciones={
     
     CCDI:[{text:"Administrativo", value:"ADMIN_CCDI_SA"}],
     
-    CGCENAC:[{text:"Administrativo", value:"ADMIN_CGCENAC_SA"}],
+    
 
 //Secretaria de Inovacion e Integracion Social
 
@@ -299,16 +301,23 @@ const direcciones={
     DIET:[{text:"Administrativo", value:"ADMIN_DIET_SIIS"}],
     
     DPITT:[{text:"Administrativo", value:"ADMIN_DPITT_SIIS"}],
-//Secretaria sde Investigacion y Posgrado
+   
+    
 
-    DI:[{text:"Investigación", value:"I"},{text:"Administrativo", value:"ADMIN_DI"}],
+    //Secretaria de Investigacion y Posgrado
+
+    DI:[{text:"Administrativo", value:"ADMIN_DI"}],
 
     SIP:[{text:"Administrativo", value:"ADMIN_SIP_SIP"}],
     
     DP:[{text:"Administrativo", value:"ADMIN_DP_SIP"}],
     
     DDCT:[{text:"Administrativo", value:"ADMIN_DDCT_SIP"}],
-    
+   
+    DI_DP:[{text:"Investigacion", value:"I_DI_DP"},{text:"Investigación y Posgrado", value:"INV_POSG"}],
+
+    //Secretaria de Servicios Educativos 
+
     SSE:[{text:"Administrativo", value:"ADMIN_SSE_SSE"}],
     
     DAES:[{text:"Administrativo", value:"ADMIN_DAES_SSE"}],
@@ -320,7 +329,25 @@ const direcciones={
     DBP:[{text:"Administrativo", value:"ADMIN_DBP_SSE"}],
     
     DAE:[{text:"Administrativo", value:"ADMIN_DAE_SSE"}],
+  // Coordinación General de Planeacion e Informacion Institucional 
+    
+    CGPII:[{text:"Administrativo", value:"ADMIN_CGPII_DG"}],
 
+    DPO:[{text:"Administrativo", value:"ADMIN_DPO_DG"}],
+
+    DII:[{text:"Administrativo", value:"ADMIN_DII_DG"}],
+    
+    // Coordinación de Imagen Institucional
+
+    CII:[{text:"Administrativo", value:"ADMIN_CII_DG"}],
+
+    //Centro Nacional de Calculo
+
+    CGCENAC:[{text:"Administrativo", value:"ADMIN_CGCENAC_SA"}],
+    
+    //Estacion de Radio
+    
+    ER:[{text:"Administrativo",value:"ADMIN_ER"}]
 }    
 
 direccionInput.addEventListener("change", () => {
@@ -350,47 +377,43 @@ direccionInput.addEventListener("change", () => {
 
 const opciones = {
 //Secretaria General
-ADMIN_DDC_SG:["Estación de Radiodifusión Radio IPN XHIPN-FM 95.7 MHZ."],
-ADMIN_CPPS_SG:["Coordinación Politécnica para la Sustentabilidad", "Unidad Politécnica de Gestión con Perspectiva de Género (UPGPG)", "Defensoría de los Derechos Politécnicos"],
+ADMIN_UPGPG:["Unidad Politécnica de Gestión con Perspectiva de Género (UPGPG)", "Defensoría de los Derechos Politécnicos"],
+ADMIN_DDP:["Defensoría de los Derechos Politécnicos"],
 ADMIN_SG_SG:["Secretaría General"],
 //Direcion General
 
 ADMIN_DG_DG:["Dirección General"],
-ADMIN_CII_DG:["Coordinación de Imagen Institucional"],
-ADMIN_CGPII_DG:["Coordinación General de Planeación e Información Institucional"],
-ADMIN_DPO_DG:["Dirección de Planeación y Organización"],
-ADMIN_DII_DG:["Dirección de Información Institucional"],
-ADMIN_DCC_DG:["Dirección de Cómputo y Comunicaciones"],
-ADMIN_DSI_DG:["Dirección de Sistemas Informáticos"],
+
+ADMIN_CPPS:["Coordinación Politécnica para la Sustentabilidad"],
+
+
 
 //Abogado General
 ADMIN_AG_AG:["Oficina del Abogado General"],
 //Presidencia del decanato
 ADMIN_PD_PD:["Presidencia del Decanato"],
-ADMIN_DFLE_PD:["Dirección de Formación en Lenguas Extranjeras"],
-ADMIN_DFIE_PD:["Dirección de Formación e Innovación Educativa"],
-ADMIN_DEV_PD:["Dirección de Educación Virtual"],
+
 //Secretaria Academica
-NMS: ['CET 1 "WALTER CROSS BUCHANAN"','CECYT 1 "GONZALO VÁZQUEZ VELA"',
-'CECYT 2 "MIGUEL BERNARD"',
-'CECYT 3 “ESTANISLAO RAMÍREZ RUIZ”',
-'CECYT 4 “LÁZARO CÁRDENAS”',
-'CECYT 5 “BENITO JUÁREZ”',
-'CECYT 6 “MIGUEL OTHÓN DE MENDIZÁBAL”',
-'CECYT 7 “CUAUHTÉMOC”',
-'CECYT 8 “NARCISO BASSOLS”',
-'CECYT 9 “JUAN DE DIOS BÁTIZ”',
-'CECYT 10 “CARLOS VALLEJO MÁRQUEZ”',
-'CECYT 11 “WILFRIDO MASSIEU”',
-'CECYT 12 “JOSÉ MARÍA MORELOS”',
-'CECYT 13 “RICARDO FLORES MAGÓN”',
-'CECYT 14 “LUIS ENRIQUE ERRO”',
-'CECYT 15 “DIÓDORO ANTÚNEZ ECHEGARAY”',
-'CECYT 16 “HIDALGO”',
-'CECYT 17 “LEÓN, GUANAJUATO”',
-'CECYT 18 “ZACATECAS”',
-'CECYT 19 "LEONA VICARIO"',
-'CECYT 20 "NATALIA SERDÁN ALATRISTE"' ],
+NMS: ['CET 1 "WALTER CROSS BUCHANAN"',
+      'CECYT 1 "GONZALO VÁZQUEZ VELA"',
+      'CECYT 2 "MIGUEL BERNARD"','CENTRO DE ESTUDIOS CIENTÍFICOS Y TECNOLÓGICOS (CECYT 3) “ESTANISLAO RAMÍREZ RUIZ”',
+      'CECYT 4 "LÁZARO CÁRDENAS"',
+      'CECYT 5 "BENITO JUÁREZ"',
+      'CECYT 6 "MIGUEL OTHÓN DE MENDIZÁBAL"',
+      'CECYT 7 "CUAUHTÉMOC"',
+      'CECYT 8 "NARCISO BASSOLS"',
+      'CECYT 9 "JUAN DE DIOS BÁTIZ"',
+      'CECYT 10  "CARLOS VALLEJO MÁRQUEZ"',
+      'CECYT 11  "WILFRIDO MASSIEU"',
+      'CECYT 12  "JOSÉ MARÍA MORELOS"',
+      'CECYT 13  "RICARDO FLORES MAGÓN"',
+      'CECYT 14  "LUIS ENRIQUE ERRO"',
+      'CECYT 15  "DIÓDORO ANTÚNEZ ECHEGARAY"',
+      'CECYT 16  "HIDALGO"',
+      'CECYT 17  "LEÓN, GUANAJUATO"',
+      'CECYT 18  "ZACATECAS"',
+      'CECYT 19  "LEONA VICARIO"',
+      'CECYT 20  "NATALIA SERDÁN ALATRISTE"' ],
 ADMIN_NMS:["Dirección de Educación Media Superior"],
 NS:["Escuela Superior de Ingeniería Mecánica y Eléctrica (ESIME), Unidad Zacatenco",
     "Escuela Superior de Ingeniería Mecánica y Eléctrica (ESIME), Unidad Culhuacán",
@@ -426,9 +449,25 @@ NS:["Escuela Superior de Ingeniería Mecánica y Eléctrica (ESIME), Unidad Zaca
     "Unidad Profesional Interdisciplinaria de Ingeniería Campus Tlaxcala (UPIIT)",
     'Unidad Profesional Interdisciplinaria de Ingeniería, Campus "Alejo Peralta" Puebla (UPIIAP)'],
     ADMIN_NS:["Dirección de Educación Superior"],
+    
+    ADMIN_DEV_SA:["Dirección de Educación Virtual"],
+    
+    ADMIN_DFIE_SA:["Dirección de Formación e Innovación Educativa"],
+
+    ADMIN_DFLE_SA:["Dirección de Formación en Lenguas Extranjeras"],
+    
     L_DFLE_SA:["Centro de Lenguas Extranjeras (CENLEX), Unidad Zacatenco",
-               "Centro de Lenguas Extranjeras (CENLEX), Unidad Santo Tomás]"],
+               "Centro de Lenguas Extranjeras (CENLEX), Unidad Santo Tomás]"],           
+    
     ADMIN_SACAD_SACAD:["Secretaría Académica"],
+    
+    
+    
+
+    
+    
+    
+
 
            
                  
@@ -439,10 +478,9 @@ ADMIN_DPP_SA:["Dirección de Programación y Presupuesto"],
 ADMIN_DRF_SA:["Dirección de Recursos Financieros"],
 ADMIN_DRMI_SA:["Dirección de Recursos Materiales e Infraestructua"],
 ADMIN_DSG_SA:["Dirección de Servicios Generales"],
-ADMIN_CCDI_SA:["Coordinación de Centros de Desarrollo Infantil",
-    "Centro de Desarrollo Infantil (CDI), Amalia Solórzano de Cárdenas",
-    "Centro de Desarrollo Infantil (CDI), Eva Sámano de López Mateo"],
-ADMIN_CGCENAC_SA:["Coordinación General del Centro Nacional de Cálculo (CENAC)"],
+ADMIN_CCDI_SA:["Coordinación de Centros de Desarrollo Infantil"],
+
+
 
 //Secretaria de Inovacion e Integracion Social
 
@@ -469,8 +507,17 @@ ADMIN_DSETT_SIIS:["Dirección de Servicios Empresariales y Transferencia Tecnol�
 ADMIN_DIET_SIIS:["Dirección de Incubación de Empresas Tecnológicas"],
 ADMIN_DPITT_SIIS:["Dirección de Prospectiva e Inteligencia Tecnológica Tecnópoli"],
 
+
+
+
+
 //Secretaria de Investigacion y Posgrado
-I:["Centro Interdisciplinario de Ciencias Marinas (CICIMAR)",
+ADMIN_DI:["Dirección de Investigación"],
+ADMIN_SIP_SIP:["Secretaría de Investigación y Posgrado"],
+ADMIN_DP_SIP:["Dirección de Posgrado"],
+ADMIN_DDCT_SIP:["Dirección de Difusión de Ciencia y Tecnología"],
+I_DI_DP:["Centro de Desarrollo Aeroespacial (CDA)","Centro de Nanociencias y Micro y Nanotecnologías (CNMN)"],
+INV_POSG:["Centro Interdisciplinario de Ciencias Marinas (CICIMAR)",
    "Centro Interdisciplinario de Investigación y Estudios Sobre Medio Ambiente Y Desarrollo (CIIEMAD)",
    "Centro Interdisciplinario de Investigación para el Desarrollo Integral Regional (CIIDIR), Unidad Durango",
    "Centro Interdisciplinario de Investigación para el Desarrollo Integral Regional (CIIDIR), Unidad Sinaloa",
@@ -488,13 +535,15 @@ I:["Centro Interdisciplinario de Ciencias Marinas (CICIMAR)",
    "Centro de Investigación en Biotecnología Aplicada, IPN -Tlaxcala (CIBA)",
    "Centro de Innovación y Desarrollo Tecnológico En Cómputo (CIDETEC)",
    "Centro de Investigación e Innovación Tecnológica (CIITEC)",
-   "Centro Mexicano para la Producción Más Limpia (CMP+L)",
-   "Centro de Desarrollo Aeroespacial (CDA)",
-   "Centro de Nanociencias y Micro y Nanotecnologías (CNMN)"],
-ADMIN_DI:["Dirección de Investigación"],
-ADMIN_SIP_SIP:["Secretaría de Investigación y Posgrado"],
-ADMIN_DP_SIP:["Dirección de Posgrado"],
-ADMIN_DDCT_SIP:["Dirección de Difusión de Ciencia y Tecnología"],
+   "Centro Mexicano para la Producción Más Limpia (CMP+L)"],
+
+
+
+
+
+
+
+
 
 //Secretaria de SE
 ADMIN_SSE_SSE:["Secretaría de Servicios Educativos"],
@@ -502,34 +551,33 @@ ADMIN_DAES_SSE:["Dirección de Administración Escolar"],
 ADMIN_DDC_SSE:["Dirección de Difusión Cultural"],
 ADMIN_DAD_SSE:["Dirección de Actividades Deportivas"],
 ADMIN_DBP_SSE:["Dirección de Bibliotecas y Publicaciones"],
-ADMIN_DAE_SSE:[ "Centros de Apoyo Polifuncionales (CAP), Carlos Vallejo Márquez-CECyT 1",
-"Centros de Apoyo Polifuncionales (CAP), Carlos Vallejo Márquez-CET 1",
-"Centros de Apoyo Polifuncionales (CAP), Carlos Vallejo Márquez-CECyT 3",
-"Centros de Apoyo Polifuncionales (CAP), Francisco Plata Limón-ESIME Azcapotzalco",
-"Centros de Apoyo Polifuncionales (CAP), Francisco Plata Limón-CECyT 8",
-"Centros de Apoyo a Estudiantes (CAP), Santo Tomas-ESE",
-"Centros de Apoyo a Estudiantes (CAP), Santo Tomas-ESEO",
-"Centros de Apoyo a Estudiantes (CAP), Santo Tomas-CECyT 11",
-"Centros de Apoyo a Estudiantes (CAP), Santo Tomas-ENCB Santo Tomás", 
-"Centros de Apoyo a Estudiantes (CAP), Manuel Cerrillo Valdivia-ESCA Tepepan", 
-"Centros de Apoyo a Estudiantes (CAP), Manuel Cerrillo Valdivia-CECyT 15", 
-"Centros de Apoyo a Estudiantes (CAP), Manuel Cerrillo Valdivia-CECyT 13", 
-"Centros de Apoyo a Estudiantes (CAP), Zacatenco-Queso I",     
-"Centros de Apoyo a Estudiantes (CAP), Zacatenco-Queso II",     
-"Centros de Apoyo a Estudiantes (CAP), Zacatenco-CECyT 19",     
-"Centros de Apoyo a Estudiantes (CAP), Zacatenco-ENCB",  
-"Centro de Apoyo a Estudiantes (CAE), Alejandro Guillot Schiaffino-UPIICSA",  
-"Centro de Apoyo a Estudiantes (CAE), Carlos Casas Campillo-EST",  
-"Centro de Apoyo a Estudiantes (CAE), Carlos Casas Campillo-CENLEX Zacatenco",  
-"Centro de Apoyo a Estudiantes (CAE), José Gómez Tagle Martínez",  
-"Centro de Apoyo a Estudiantes (CAE), Juan O 'gorman-CECyT 4",       
-"Centro de Apoyo a Estudiantes (CAE), Juan O 'gorman-CECyT 2",       
-"Centro de Apoyo a Estudiantes (CAE), Juan O 'gorman-CECyT 9",       
-"Centro de Apoyo a Estudiantes (CAE), Manuel L. Stampa Ortigoza-ESIA Ticomán",          
-"Centro de Apoyo a Estudiantes (CAE), Manuel L. Stampa Ortigoza-ENBA",           
-"Centro de Apoyo a Estudiantes (CAE), Manuel L. Stampa Ortigoza-UPIIH",           
-"Centro de Apoyo a Estudiantes (CAE), Manuel L. Stampa Ortigoza-UPIIG",           
-"Centro de Apoyo a Estudiantes (CAE), Manuel L. Stampa Ortigoza-UPIITA"]
+ADMIN_DAE_SSE:["Dirección de Apoyos a Estudiantes"],
+
+
+//Coordinacion General de Planeacion e Informacion Institucional
+
+ADMIN_CGPII_DG:["Coordinación General de Planeación e Información Institucional"],
+
+ADMIN_DPO_DG:["Dirección de Planeación y Organización"],
+
+ADMIN_DII_DG:["Dirección de Información Institucional"],
+
+
+
+// Coordinación de Imagen Institucional
+
+ADMIN_CII_DG:["Coordinación de Imagen Institucional"],
+
+
+//Centro Nacional de Calculo
+
+ADMIN_CGCENAC_SA:["Centro Nacional de Cálculo (CENAC)",
+                  "Dirección de cómputo y comunicaciones",
+                  "Dirección de sistemas informáticos"],
+
+//Estacion de Radio
+
+ADMIN_ER:["Estación de Radiodifusión Radio IPN XHIPN-FM 95.7 MHZ."]
 };
 
 nivelInput.addEventListener("change", () => {
@@ -608,7 +656,6 @@ function agregarFila(){
         > </textarea>
       </td>
 
-    <td>
 
 
     <td>
@@ -652,7 +699,6 @@ function agregarFila(){
                    <option value="Baja">Baja</option>
                    <option value="Media">Media</option>
                    <option value="Alta">Alta</option>
-                   <option value="Urgente">Urgente</option> 
       </select>
     </td>
 
@@ -749,13 +795,3 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
   })
   .catch(() => alert("Error al enviar"));
 });
-
-
-
-
-
-
-
-
-
-
