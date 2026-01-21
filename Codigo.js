@@ -770,6 +770,7 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
   alert("✅ Borrador guardado correctamente");
 });
 
+
 document.getElementById("cargarBorrador").addEventListener("click", () => {
   const borrador = localStorage.getItem("borradorFormulario");
   if (!borrador) {
@@ -790,25 +791,25 @@ document.getElementById("cargarBorrador").addEventListener("click", () => {
     agregarFila();
   }
 
-  // Asignar valores
-  Object.keys(data).forEach(name => {
-    if (name === "__filas") return;
 
-    const campo = form.querySelector(`[name="${name}"]`);
-    if (campo) {
-      campo.value = data[name];
 
-      // Ajustar altura de textareas
-      if (campo.tagName === "TEXTAREA") {
-        campo.style.height = "auto";
-        campo.style.height = campo.scrollHeight + "px";
-      }
-    }
-  });
+// Restaurar selects encadenados
+setSelectValue("secretaria", data.secretaria);
 
-  generarNivel();
-  generarDependencia();
+setTimeout(() => {
+  setSelectValue("direccion", data.direccion);
 
+  setTimeout(() => {
+    setSelectValue("nivel", data.nivel);
+
+    setTimeout(() => {
+      setSelectValue("dependencia", data.dependencia);
+
+      // ⬇️ Ahora sí, restaurar la tabla
+      restaurarTabla(data);
+    }, 0);
+  }, 0);
+}, 0);
   alert("📂 Borrador cargado correctamente");
 });
 
@@ -893,4 +894,5 @@ document.getElementById("nuevoRegistro").addEventListener("click", () => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
