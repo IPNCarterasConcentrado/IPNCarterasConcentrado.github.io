@@ -849,7 +849,7 @@ setTimeout(() => {
       const telTitular = document.getElementById("telefonoTitular");   
       telTitular.value = data.telefonoTitular;
       const CorreoTitular = document.getElementById("correoTitular");   
-      CorreoTitular.value = data.telefono;
+      CorreoTitular.value = data.correoTitular;
       const responsable = document.getElementById("responsable");   
       responsable.value = data.responsable;
       const telResponsable = document.getElementById("telefonoResponsable");   
@@ -947,6 +947,7 @@ document.getElementById("nuevoRegistro").addEventListener("click", () => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
