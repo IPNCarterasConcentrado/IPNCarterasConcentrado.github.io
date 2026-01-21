@@ -749,6 +749,104 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
   });
 
 
+/* REVISAR*/
+
+
+  document.getElementById("guardarBorrador").addEventListener("click", () => {
+  const form = document.getElementById("miFormulario");
+  const formData = new FormData(form);
+
+  const data = {};
+
+  formData.forEach((value, key) => {
+    data[key] = value;
+  });
+
+  // Guardamos también el número de filas actuales
+  data.__filas = document.querySelectorAll("#tablaBody tr").length;
+
+  localStorage.setItem("borradorFormulario", JSON.stringify(data));
+
+  alert("✅ Borrador guardado correctamente");
+});
+
+document.getElementById("cargarBorrador").addEventListener("click", () => {
+  const borrador = localStorage.getItem("borradorFormulario");
+  if (!borrador) {
+    alert("⚠️ No hay ningún borrador guardado");
+    return;
+  }
+
+  const data = JSON.parse(borrador);
+  const form = document.getElementById("miFormulario");
+
+  // Limpiar tabla
+  const tbody = document.getElementById("tablaBody");
+  tbody.innerHTML = "";
+
+  // Reconstruir filas
+  const filas = data.__filas || 10;
+  for (let i = 1; i <= filas; i++) {
+    agregarFila();
+  }
+
+  // Asignar valores
+  Object.keys(data).forEach(name => {
+    if (name === "__filas") return;
+
+    const campo = form.querySelector(`[name="${name}"]`);
+    if (campo) {
+      campo.value = data[name];
+
+      // Ajustar altura de textareas
+      if (campo.tagName === "TEXTAREA") {
+        campo.style.height = "auto";
+        campo.style.height = campo.scrollHeight + "px";
+      }
+    }
+  });
+
+  generarNivel();
+  generarDependencia();
+
+  alert("📂 Borrador cargado correctamente");
+});
+
+/*      */ 
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("nuevoRegistro").addEventListener("click", () => {
+  if (!confirm("Se perderán los datos actuales. ¿Deseas continuar?")) return;
+
+  localStorage.removeItem("borradorFormulario");
+
+  const form = document.getElementById("miFormulario");
+  form.reset();
+
+  const tbody = document.getElementById("tablaBody");
+  tbody.innerHTML = "";
+
+  for (let i = 1; i <= 10; i++) {
+    agregarFila();
+  }
+
+  alert("🆕 Formulario listo para un nuevo registro");
+});
+
+
+
+
+
+
 
 //Guardado de Datos    
     
@@ -795,3 +893,4 @@ document.getElementById("miFormulario").addEventListener("keydown", function (e)
   })
   .catch(() => alert("Error al enviar"));
 });
+
