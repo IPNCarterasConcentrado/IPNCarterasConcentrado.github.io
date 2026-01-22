@@ -138,7 +138,7 @@ textarea {
 }
 */
 
-.tabla_style {
+.tabla_style,.datos{
     width: 100%;       /* ocupa todo el ancho disponible del formulario */
     margin: 0;         /* sin márgenes extras */
     /*border-collapse: collapse;*/
@@ -308,22 +308,25 @@ p {
      background-color: #DCDCDE;
      border:1px solid #DCDCDE;
 }
+.datos th:nth-child(1),
 .datos td:nth-child(1){
-    width: 30%;
-    min-width: 500px;
+    width: 33%;
+/*    min-width: 454px;*/
     padding-left:5px;
     padding-right:5px;
     
 }
+.datos th:nth-child(2),
 .datos td:nth-child(2){
-    width: 30%;
-    min-width: 350px;
+    width: 33%;
+/*    min-width: 318px;*/
     padding-left:5px;
     padding-right:5px;
 }
+.datos th:nth-child(3),
 .datos td:nth-child(3){
-    width: 30%;
-    min-width: 380px;
+    width: 33%;
+    /*min-width: 345px;*/
     padding-left:5px;
     padding-right:5px;
 }
@@ -352,17 +355,17 @@ p {
 legend{    
     font-size:large ;
 }
-.bloque-info {
+.bloque-info,.bloque-DatosDep {
   display: flex;
   gap: 40px;
-  max-width: 1200px;
+/*  max-width: 1200px;*/
   margin: 20px auto;
   margin-left: 5px;
 }
 .bloque-botones {
   display: flex;
   gap: 10px;
-  max-width: 1200px;
+ /** max-width: 1200px;**/
   margin-left: 5%;
   align-items: center;
 }
@@ -379,6 +382,7 @@ legend{
    min-width: 500px;
 }
 .DatosNOT{
+    align-self: center;
     margin:5%;
 }
 .bloque-inst {
@@ -414,4 +418,8 @@ legend{
 }
 .RESL{
     min-width: 100px;
+}
+.Aviso{
+    font-size: x-large;
+    text-align: center;
 }
