@@ -21,20 +21,20 @@
 <form id="miFormulario">
     
    <h1>PROGRAMA INSTITUCIONAL DE DETECCIÓN DE NECESIDADES DE EQUIPAMIENTO (PIDNE) 2026</h1>
-   <div class=".DatosNOT">
-    <div class="bloque-info">
+<!-- <div class="DatosNOT"> -->
+   <div class="bloque-info">
        <fieldset>
                    <legend>OBJETIVO</legend>
                    <p class="Just OBJ">Con el propósito de iniciar la conformación de Proyectos de Inversión correspondientes al Capítulo 5000, se presenta la Tabla de Registro de Necesidades. Este instrumento permitirá identificar, justificar y documentar de manera ordenada los requerimientos institucionales relacionados con la adquisición de equipamiento.</p>
        </fieldset>
           
        <fieldset>
-                  <legend>DEFINICION DE CAPÍTULO 5000</legend>
+                  <legend>DEFINICIÓN DE CAPÍTULO 5000</legend>
                   <p class="Just C5000">El Capítulo 5000 del Clasificador Único de Contrataciones Públicas (CUCoP) corresponde a Bienes Muebles, Inmuebles e Intangibles, y se destina a la adquisición de mobiliario, equipo, vehículos, maquinaria, bienes científicos y demás activos indispensables para el adecuado funcionamiento y fortalecimiento de las dependencias públicas</p>
        </fieldset>
-      </div> 
-  <div class="bloque-inst">
-      <h2>Intrucciones</h2>
+      </div>
+  <div class="bloque-inst">    
+   <h2>Intrucciones</h2>
    <p>
       <ul>
           <li>El formulario de solicitud está diseñado para capturar una sola vez. Después de su envío, no podrá ser modificado.</li>
@@ -46,16 +46,19 @@
       </ul>    
      
    </p>
-  </div> 
-    <table class="datos">
-   <tr>
-    <td>
-      <fieldset>
+   </div> 
+
+    <!--<table class="datos">
+    <tbody>
+    <tr>
+    <td>-->
+    <div class="bloque-DatosDep">  
+    <fieldset>
     <legend>Información General </legend>
     
     <div class="form_input IG">
       <label for="secretaria">Secretaría o Direccion General</label>
-      <select id="secretaria" name="secretaria" placeholder="   " required>
+      <select id="secretaria" name="secretaria" placeholder="   " class="IGS" required>
                    <option value="">-- Selecciona un nivel--</option>
                   <option value="CII">Coordinación de Imagen Institucional</option>
                   <option value="CGPII">Coordinación General de Planeación e Información Institucional</option>
@@ -76,31 +79,31 @@
 
     <div class="form_input IG">
          <label for="direccion">Dirección o Coordinación</label>   
-             <select id="direccion" name="direccion" disabled required>
+             <select id="direccion" name="direccion" class="IGS" disabled required>
              <option value="">-- Selecciona un dirección--</option>
              </select>
     </div>
      
     <div class="form_input IG">
           <label for="nivel">Nivel/Área/otro</label>   
-             <select id="nivel" name="nivel" disabled required>
+             <select id="nivel" name="nivel" class="IGS" disabled required>
              <option value="">-- Selecciona un nivel--</option>
              </select>
             </div>
     <div class="form_input IG">    
              <label for="dependencia">Dependencia</label>
-             <select name="dependencia" id="dependencia" disabled required>
-               <option value="">-- Selecciona primero una categoría --</option>
+             <select name="dependencia" id="dependencia" class="IGS" disabled required>
+               <option value="">-- Selecciona una dependencia --</option>
              </select>
     </div> 
 
   </fieldset>
-    </td>
+  <!--  </td>
        
     <td>
-<fieldset>
-
-  <legend>Información del Titular </legend>
+    -->
+      <fieldset>
+   <legend>Información del Titular </legend>
 
 
     <div class="form_input TIT">
@@ -120,48 +123,52 @@
     
     
 </fieldset>
-</td>
+
+<!--</td>
 
 <td>
+-->
 <fieldset>
 
   <legend>Información del Responsable de Registro </legend>
 
     
     <div class="form_input RES">
-      <label for="responsable">Responsable </label>
+      <label for="responsable" class="RESL">Responsable </label>
       <input id="responsable" name="responsable" placeholder="Nombre commpleto " required>
     </div>
 
 
     <div class="form_input RES">
-      <label for="telefonoResponsable">Extensión</label>
+      <label for="telefonoResponsable" class="RESL">Extensión</label>
       <input id="telefonoResponsable" name="telefonoResponsable" placeholder="Extensión " type="tel" required>
     </div>
 
     <div class="form_input RES">
-      <label for="correoResponsable">Correo</label>
+      <label for="correoResponsable" class="RESL">Correo</label>
       <input id="correoResponsable" name="correoResponsable" placeholder="Correo " type="email" required>
     </div>
   
 </fieldset>
+<!--
 </td>
        
+</tr>
 
-   </tr>
-      
+  </tbody>
 
 </table>
+-->
+<!--</div> -->
 </div>
-        
-        <div class="bloque-botones">
 
+<div class="bloque-botones">
 <button type="button" id="guardarBorrador">💾 Guardar borrador</button>
 <button type="button" id="cargarBorrador">📂 Continuar registro</button>
- </div>
-    
-<fieldset class="TablaFS"> 
-  <legend class="TablaLeg" >Tabla de Registro de Necesidades</legend> 
+</div>
+
+<!--<fieldset class="TablaFS"> 
+  <legend class="TablaLeg" >Tabla de Registro de Necesidades</legend> -->
 <table class="tabla_style" title="Tabla de Registro de Necesidades">
 <thead>
                                <tr>
@@ -209,10 +216,10 @@
                               
                         </tbody>     
 </table>
-</fieldset>
+<!--</fieldset>-->
 <button type="submit">Enviar</button>
 
-<p id="aviso"></p>
+<p id="aviso" class="Aviso"></p>
 
 
     
@@ -226,33 +233,4 @@
 
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
