@@ -43,7 +43,7 @@ form {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 20px 20px;
     background-color: transparent;
     border-radius: 8px;
     color: #fff;
@@ -54,8 +54,8 @@ form {
 /* FIELDSETS */
 fieldset {
     width: 100%;
-    margin: 0 0 20px 0;
-    padding: 15px;
+    margin: 0 0 10px 0;
+    padding: 5px;
     border: 1px solid #f04d69;
     border-radius: 5px;
     background-color: #DCDCDE;
@@ -174,9 +174,11 @@ td {
 button {
     width: 100%;
     max-width: 800px;
+    height:40px;
     display: block;
     margin: 20px auto;
     border-radius: 35px;
+    font-size: medium;
 }
 .TablaLeg{
     width: 100%;
@@ -307,23 +309,23 @@ p {
      border:1px solid #DCDCDE;
 }
 .datos td:nth-child(1){
-    width: 25%;
-    min-width: 600px;
-    padding-left:10px;
-    padding-right:10px;
+    width: 30%;
+    min-width: 500px;
+    padding-left:5px;
+    padding-right:5px;
     
 }
 .datos td:nth-child(2){
-    width: 25%;
-    min-width: 600px;
-    padding-left:10px;
-    padding-right:10px;
+    width: 30%;
+    min-width: 350px;
+    padding-left:5px;
+    padding-right:5px;
 }
 .datos td:nth-child(3){
-    width: 25%;
-    min-width: 600px;
-    padding-left:10px;
-    padding-right:10px;
+    width: 30%;
+    min-width: 380px;
+    padding-left:5px;
+    padding-right:5px;
 }
 
 .precio-wrapper {
@@ -348,21 +350,20 @@ p {
 }
 
 legend{    
-    font-size:x-large ;
+    font-size:large ;
 }
 .bloque-info {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   max-width: 1200px;
   margin: 20px auto;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .bloque-botones {
   display: flex;
   gap: 10px;
   max-width: 1200px;
-  margin: 30px;
-  margin-left: 250px;  
+  margin-left: 5%;
   align-items: center;
 }
 .Just{
@@ -370,15 +371,47 @@ legend{
     font-size:large;
 }
 .C5000{
-   width:900px;
+  width:100%;
+  min-width: 600px;
 }
 .OBJ{
-   width:800px;
+   width:100%;
+   min-width: 500px;
 }
 .DatosNOT{
-    margin:100px;
+    margin:5%;
 }
 .bloque-inst {
   margin: 30px;
 }
+.IG{
+    display: grid;
+    grid-template-columns: 35% 55%; /* siempre dos columnas */
+    gap: 10px;
+}
+.TIT,.RES{
+    display: grid;
+    grid-template-columns: 35% 55%; /* siempre dos columnas */
+    gap: 20px;
+}
+.TIT input,
+.RES input {
+    width: 80%;          /* más chico que 100% */
+    padding: 4px 6px;    /* reduce altura */
+    font-size: 0.9rem;   /* texto ligeramente más pequeño */
+}
 
+/* Opcional: correos un poco más largos */
+.TIT input[type="email"],
+.RES input[type="email"] {
+    width: 90%;
+}
+
+/* Ajuste fino del grid para que no se vean aplastados */
+.TIT,
+.RES {
+    grid-template-columns: 25% 65%;
+}
+.RESL{
+    min-width: 100px;
+}
