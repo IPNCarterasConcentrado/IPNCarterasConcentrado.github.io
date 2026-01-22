@@ -161,12 +161,7 @@ SG:[{text:"Unidad Politécnica de gestión con perspectiva de género (UPGPG)",v
         {text:"Dirección de Convenios y Trámite Registral",value:"DCTR"},  
         {text:"Dirección de Legislación, Consulta y Transparencia",value:"DLCT"}],
 
-    DAJ:[{text:"Administrativo", value:"ADMIN_DAJ_AG"}],
-    
-    DCTR:[{text:"Administrativo", value:"ADMIN_DCTR_AG"}],
-    
-    DLCT:[{text:"Administrativo", value:"ADMIN_DLCT_AG"}],
-    
+     
     /*  YA---------------------------------------------- */ 
     PD:[{text:"Presidencia del Decanato", value:"PD"}],
      /*  YA---------------------------------------------- */
@@ -604,8 +599,8 @@ ADMIN_CII_DG:["Coordinación de Imagen Institucional"],
 //Centro Nacional de Calculo
 
 ADMIN_CGCENAC_SA:["Centro Nacional de Cálculo (CENAC)"],
-ADMIN_DCC_CGCENAC:["Dirección de cómputo y comunicaciones"],                 
-ADMIN_DSI_CGCENAC:["Dirección de sistemas informáticos"],
+ADMIN_DCC_CENAC:["Dirección de cómputo y comunicaciones"],                 
+ADMIN_DSI_CENAC:["Dirección de sistemas informáticos"],
 
   
 //Estacion de Radio
@@ -992,6 +987,7 @@ document.getElementById("nuevoRegistro").addEventListener("click", () => {
   })
   .catch(() => alert("Error al enviar"));
 });
+
 
 
 
