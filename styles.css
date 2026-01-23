@@ -422,4 +422,37 @@ legend{
 .Aviso{
     font-size: x-large;
     text-align: center;
+
 }
+
+@media (max-width: 768px) {
+                    .IG,.IGF{
+                       width:320px;    
+                    }
+                    .TIT,.RES,.IRF,.ITF{
+                       width:250px;      
+                    }
+                    .C5000{
+                            width:100%;
+                            min-width: 370px;
+                    }
+                    .OBJ{
+                             width:100%;
+                             min-width: 350px;
+                    } 
+                    fieldset{
+                        padding:0px;
+                    } 
+                    .bloque-info,.bloque-DatosDep {
+                      display: flex;
+                      gap: 10px;
+                    /*  max-width: 1200px;*/
+                      margin: 0 auto;
+                      margin-left: 5px;
+                    }
+                    input{
+                        margin-left: 20px;
+                    }
+}
+
+
