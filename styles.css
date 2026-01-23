@@ -113,16 +113,14 @@ textarea {
 
 /* IMÁGENES ENCABEZADO */
 .imagenes {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
+    display: flex;
     gap: 0px;
 }
 
 .imagenes img {
     width: 100%;
-    height: 80px;
-}
 
+}
 @media (max-width: 768px) {
     .imagenes img {
     width: 100%;
@@ -454,6 +452,7 @@ legend{
                         margin-left: 20px;
                     }
 }
+
 
 
 
