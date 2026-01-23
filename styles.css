@@ -441,7 +441,7 @@ legend{
                              min-width: 350px;
                     } 
                     fieldset{
-                        padding:0px;
+                        padding:5px;
                     } 
                     .bloque-info,.bloque-DatosDep {
                       display: flex;
@@ -454,5 +454,6 @@ legend{
                         margin-left: 20px;
                     }
 }
+
 
 
